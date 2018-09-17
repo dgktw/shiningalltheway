@@ -7,15 +7,50 @@
     <meta name="description" content="八橋龍首地位，坐擁台北橋．新北門戶第一站！雄踞三和生活圈，東三重，利財旺－喬遷東利八方，誌喜大利八方！先建後售，品質可鑑，大利安心!">
     <meta name="keywords" content="東利八方，東利八方賞屋資訊">
     <title>東利八方_八橋龍首地位，坐擁台北橋．新北門戶第一站！</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
     <style>
-        *{padding: 0;margin: 0;font-family:'微軟正黑體', sans-serif;}
+        /*全域設定    ==================================================================*/
+        :root{
+            --main-black:#333;
+            --main-red:#b50029;
+            --main-subred:#dd0032;
+        }
+        *{padding: 0;margin: 0;font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體', sans-serif;outline: none;color: var(--main-black);}
+        body,html{background-color: #fff;}
+        a,a:hover{text-decoration: none;}
+        ul,li{list-style: none;}
+        
+        /*header設定  ==================================================================*/
+        header{border-bottom: 1px solid rgba(68, 68, 68, 0.35);}
+        nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
+        nav>div{float: left;padding-left: 15px;}    
+        nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center; background-size: cover;}
+        nav ul{overflow: hidden;float: right;}
+        nav ul li{float: left;padding: 15px;}
+        nav ul li a{transition: 0.2s;font-weight: bold;}
+        nav ul li a:active,nav ul li:hover a{color: var(--main-subred);}
+        
+        /*header RWD設定  ============================================================*/
+        @media (max-width:768px){
+            nav{text-align: center;margin:25px 0 0;}
+            nav>div,nav ul{float: none;}
+            nav ul{display: inline-block;margin-top: 10px;}
+            nav>div>a{margin:0 auto;}
+        }
+        @media (max-width:500px){
+            nav ul{margin: 0;}
+            nav ul li{padding:10px 6px 15px;}
+            nav ul li a{font-size: 0.76rem;}
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid outerCotainer">
         <header>
             <nav>
-                <a href="" id="logo"></a>
+                <div>
+                    <a href="index.html" id="logo"></a>
+                </div>
                 <ul>
                     <li><a href="#timing">生活交通</a></li>
                     <li><a href="#feature">宅院特色</a></li>
