@@ -8,6 +8,26 @@
     <meta name="keywords" content="東利八方，東利八方賞屋資訊">
     <title>東利八方_八橋龍首地位，坐擁台北橋．新北門戶第一站！</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    
+    
+<!--
+    <link rel="stylesheet" href="bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+    $(function(){
+        $('.slider').bxSlider({
+            auto: true
+            ,slideWidth: 880
+            ,speed:1000 //轉場時間
+            ,pause:2800 //每張持續的時間
+        });
+    })
+    </script>
     <style>
         /*全域設定    ==================================================================*/
         :root{
@@ -62,6 +82,24 @@
         #feature figcaption{background-color:#fff;width: 80%;margin: 0 auto;padding: 30px 50px;height: 57%;box-sizing: border-box;position: absolute;left: 50%;bottom: -30%;transform: translate(-50%,0);}
         #feature figcaption h3{text-align: center;margin-bottom: 15px;color: var(--main-red);}
         
+        
+        /*slider設定      ============================================================*/
+/*
+        #slider{position: relative;}
+        #slider::before{content: '';width: 100%; background-color: var(--main-red);max-width: 1200px;position: absolute;height: 500px;display: inline-block;top: 150px;left: 50%;transform: translateX(-50%);}
+*/
+        #slider .bx-wrapper{margin: 0 auto;border:none;box-shadow: none;}
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{bottom: 30px;}
+        /*change color*/
+        .bx-wrapper .bx-pager.bx-default-pager a{background-color: #fff;}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
+            background-color: var(--main-red);
+        }
+        .bx-wrapper .bx-controls-direction a{top: auto;margin-top:0;bottom: 0;}
+        .bx-wrapper .bx-next{background-image: url(image/Dongli_img/001-right-arrow.svg);right: 0;}
+        .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/002-left-arrow.svg);left: 0;}
+        .bx-wrapper .bx-prev,.bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
+        .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus,.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus{background-position: center;}
         /*header RWD設定  ============================================================*/
         @media (max-width:768px){
             nav{text-align: center;margin:25px 0 0;}
@@ -200,9 +238,20 @@
         <section class="container" id="designTeam"></section>
         <section class="container" id="slider">
             <h2 class="mainTitle">滿城繁華半城靜 一座莊園墅萬坪</h2>
+            <div class="slider">
+                <div><img src="image/Dongli_img/_D8A5804.jpg" alt="slider image1"></div>
+                <div><img src="image/Dongli_img/_D8A5825.jpg" alt="slider image2"></div>
+                <div><img src="image/Dongli_img/_D8A5894.jpg" alt="slider image3"></div>
+                <div><img src="image/Dongli_img/_D8A5907.jpg" alt="slider image4"></div>
+                <div><img src="image/Dongli_img/_D8A5937.jpg" alt="slider image5"></div>
+            </div>
         </section>
-        <section class="container" id="panoramic"></section>
-        <section class="container" id="contact"></section>
+        <section class="container" id="panoramic">
+            <div>iframe</div>
+        </section>
+        <section class="container" id="contact">
+            
+        </section>
         <footer></footer>
     </div>
 </body>
