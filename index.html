@@ -40,7 +40,7 @@
         a,a:hover{text-decoration: none;}
         ul,li{list-style: none;}
         .container{padding:0 50px;margin-bottom: 100px;text-align: center;}
-        .fontSetting{letter-spacing: 0.18rem;line-height: 1.8;}
+        .fontSetting{letter-spacing: 0.15rem;line-height: 1.8;}
         .mainTitle{ margin-bottom: 30px;position: relative;display: inline-block;letter-spacing: .2rem;}
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
@@ -49,7 +49,7 @@
         nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
         nav>div{float: left;padding-left: 15px;}    
         nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
-        nav ul{overflow: hidden;float: right;}
+        nav ul{overflow: hidden;float: right;letter-spacing: .12rem;}
         nav ul li{float: left;padding: 15px;}
         nav ul li a{transition: 0.2s;font-weight: bold;}
         nav ul li a:active,nav ul li:hover a{color: var(--main-subred);}
@@ -60,7 +60,7 @@
         #heroImage .textWrapper{position: absolute;left: 0;top: 0;}
         #heroImage .topImage{background: url(image/Dongli_img/_D8A2747.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
         #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
-        #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-100%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
+        #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
         
         /*heroImage RWD設定  ========================================================*/
         
@@ -69,7 +69,7 @@
         #timing{max-width: 1200px;margin-left: auto;margin-right: auto;}
         #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 70px 0 150px;}
         #timing .item{display: flex;align-items: center;justify-content:center;}
-        #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red); }
+        #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red);}
         #timing .content{margin-right:20px;width: 180px;}
         #timing .symbol{margin-left: 20px;font-size: 40px;}
         #timing .distance{text-align: center;margin-bottom: 10px;}
@@ -100,6 +100,25 @@
         .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/002-left-arrow.svg);left: 0;}
         .bx-wrapper .bx-prev,.bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
         .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus,.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus{background-position: center;}
+        
+        /*contact設定      ============================================================*/
+        #contact .row{margin-bottom: 50px;}
+        #contact .content{text-align: left;}
+        #contact .content>a{background: url(image/Dongli_img/logo.png) center;display: block;width: 20%;height: 100px;background-size: cover;margin-bottom: 30px;}
+        #contact .content p{font-size: 2rem;margin-bottom: 50px;letter-spacing: 0.2rem;}
+        #contact .row{display: flex;}
+        #contact .info,#contact form{width: 50%;}
+        #contact li{padding:10px 0;}
+        #contact .headInfo{color:var(--main-red); }
+        #contact li:nth-of-type(1) .headInfo + span{margin-left: 60px;}
+        #contact .headInfo + span{margin-left: 25px;}
+        #contact label{display: block;padding: 10px 0;}
+        #contact label input{width:calc(100% - 100px);border: none;border-bottom: 1px solid #666;margin-left: 25px;}
+        #contact .hide{color: transparent;}
+        #contact #submit{padding: 15px 0;border: none;background-color:var(--main-black);color: #fff;margin:25px 0 0 20px;letter-spacing: 0.3rem;}
+        #contact iframe{width: 100%;}
+        /*header RWD設定  ============================================================*/
+        footer{text-align: center;margin-bottom: 30px;}
         /*header RWD設定  ============================================================*/
         @media (max-width:768px){
             nav{text-align: center;margin:25px 0 0;}
@@ -124,7 +143,7 @@
                 <ul>
                     <li><a href="#timing">生活交通</a></li>
                     <li><a href="#feature">宅院特色</a></li>
-                    <li><a href="#designTeam">建築團隊</a></li>
+<!--                    <li><a href="#designTeam">建築團隊</a></li>-->
                     <li><a href="#slider">外觀設計</a></li>
                     <li><a href="#contact">聯絡我們</a></li>
                 </ul>
@@ -235,7 +254,7 @@
                 </figure>
             </div>
         </section>
-        <section class="container" id="designTeam"></section>
+<!--        <section class="container" id="designTeam"></section>-->
         <section class="container" id="slider">
             <h2 class="mainTitle">滿城繁華半城靜 一座莊園墅萬坪</h2>
             <div class="slider">
@@ -250,9 +269,41 @@
             <div>iframe</div>
         </section>
         <section class="container" id="contact">
-            
+            <h2 class="mainTitle">立即預約賞屋</h2>
+            <div class="content">
+                <a href="javascript:;"></a>
+                <p>歡迎與我們立即聯絡<br>我們隨時為您提供最佳服務</p>
+                <div class="row">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <span class="headInfo fontSetting">電話</span>
+                                <span>(02)2975-8666</span>
+                            </li>
+                            <li>
+                                <span class="headInfo fontSetting">接待中心</span>
+                                <span>新北市三重區福德北路26號</span>
+                            </li>
+                            <li>
+                                <span class="headInfo fontSetting">基地位置</span>
+                                <span>三重區中央北路37號、27巷16、18號</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="fontSetting" action="" method="get" name="contactForm" id="contactForm">
+                        <label><span>您的姓名</span><input type="text"></label>
+                        <label><span>您的電話</span><input type="text"></label>
+                        <label><span>您的信箱</span><input type="text"></label>
+                        <label class="buttonCon">
+                            <span class="hide">您的按鈕</span>
+                            <input class="fontSetting" type="submit" value="確認預約" name="submit" id="submit">
+                        </label>
+                    </form>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.09537953988!2d121.49996651418266!3d25.06475618395796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a922dece864d%3A0x24d7ed2773e96cc4!2z5p2x5Yip5YWr5pa5LeeGsemKt-W7uuahiA!5e0!3m2!1szh-TW!2stw!4v1537259698119" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
         </section>
-        <footer></footer>
+        <footer>COPYRIGHT © 2018</footer>
     </div>
 </body>
 </html>
