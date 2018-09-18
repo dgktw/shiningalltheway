@@ -19,16 +19,48 @@
         body,html{background-color: #fff;}
         a,a:hover{text-decoration: none;}
         ul,li{list-style: none;}
-        
+        .container{padding:0 50px;margin-bottom: 100px;text-align: center;}
+        .fontSetting{letter-spacing: 0.18rem;line-height: 1.8;}
+        .mainTitle{ margin-bottom: 30px;position: relative;display: inline-block;letter-spacing: .2rem;}
+        .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
+        .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
         /*header設定  ==================================================================*/
         header{border-bottom: 1px solid rgba(68, 68, 68, 0.35);}
         nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
         nav>div{float: left;padding-left: 15px;}    
-        nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center; background-size: cover;}
+        nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
         nav ul{overflow: hidden;float: right;}
         nav ul li{float: left;padding: 15px;}
         nav ul li a{transition: 0.2s;font-weight: bold;}
         nav ul li a:active,nav ul li:hover a{color: var(--main-subred);}
+        
+        /*heroImage  ================================================================*/
+        #heroImage .normalText{color: #fff;}
+        #heroImage>div{position: relative;}
+        #heroImage .textWrapper{position: absolute;left: 0;top: 0;}
+        #heroImage .topImage{background: url(image/Dongli_img/_D8A2747.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
+        #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
+        #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-100%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
+        
+        /*heroImage RWD設定  ========================================================*/
+        
+        
+        /*timing   ================================================================*/
+        #timing{max-width: 1200px;margin-left: auto;margin-right: auto;}
+        #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 70px 0 150px;}
+        #timing .item{display: flex;align-items: center;justify-content:center;}
+        #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red); }
+        #timing .content{margin-right:20px;width: 180px;}
+        #timing .symbol{margin-left: 20px;font-size: 40px;}
+        #timing .distance{text-align: center;margin-bottom: 10px;}
+        #timing .place{text-align: center;}
+        /*feature  ================================================================*/
+        #feature .row{padding-bottom: 130px;overflow: hidden;}
+        #feature .row:nth-of-type(1){margin-bottom: 50px;}
+        #feature figure{width: 50%;float: left;position: relative;}
+        #feature figure img{width: 100%;}
+        #feature figcaption{background-color:#fff;width: 80%;margin: 0 auto;padding: 30px 50px;height: 57%;box-sizing: border-box;position: absolute;left: 50%;bottom: -30%;transform: translate(-50%,0);}
+        #feature figcaption h3{text-align: center;margin-bottom: 15px;color: var(--main-red);}
         
         /*header RWD設定  ============================================================*/
         @media (max-width:768px){
@@ -60,11 +92,115 @@
                 </ul>
             </nav>
         </header>
-        <section class="container" id="heroImage"></section>
-        <section class="container" id="timing"></section>
-        <section class="container" id="feature"></section>
+        <section class="container" id="heroImage">
+            <div>
+                <div class="topImage"></div>
+                <div class="textWrapper fontSetting">
+                    <div class="textGroup">
+                       <span class="normalText">羨慕美式別墅社區的生活嗎?</span>
+                    </div>
+                    <div class="textGroup">
+                        <span class="normalText">想遠離都市來個小旅行嗎?</span>
+                    </div>                   
+                    <div class="textGroup">
+                       <span class="whiteBgText">歡迎來到「東利八方」</span>
+                    </div>                   
+                    <div class="textGroup">
+                        <span class="whiteBgText">找你要的家</span>
+                    </div>
+                </div>
+                <div class="reservation"><span>立即<br>預約</span></div>
+            </div>
+        </section>
+        <section class="container" id="timing">
+            <h2 class="mainTitle">南勢角、景平雙捷運暢行雙北</h2>
+            <div class="row">
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap">
+                                <span class="firstLetter">50</span>公尺
+                            </div>
+                        </div>
+                        <div class="place fontSetting">步行抵達三和夜市</div>
+                    </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap">
+                                <span class="firstLetter">200</span>公尺</div>
+                            </div>
+                        <div class="place fontSetting">開車抵達台北橋</div>
+                    </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap">
+                                <span class="firstLetter">250</span>公尺
+                            </div>
+                        </div>
+                        <div class="place fontSetting">步行抵達台北橋站</div>
+                    </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap">
+                                <span class="firstLetter">700</span>公尺
+                            </div>
+                        </div>
+                        <div class="place fontSetting">步行抵達三重國小站</div>
+                    </div>
+                    <div class="symbol"></div>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="feature">
+            <h2 class="mainTitle">都市裡的大自然依山傍溪 101在身邊</h2>
+            <div class="row">
+                <figure>
+                   <img src="image/Dongli_img/mrt.jpg" alt="">
+                    <figcaption>
+                        <h3>交通樞紐</h3>
+                        <p class="fontSetting">全民保健時代來臨，國家級醫學中心：台北市立萬芳醫院，權威醫療，安心加倍。運動中心、泳池、球場、健身房、舞蹈教室、羽球場…天天運動，保持年輕</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                   <img src="image/Dongli_img/nightMarket1.jpg" alt="">
+                    <figcaption>
+                        <h3>繁華日常</h3>
+                        <p class="fontSetting">「双捷晶華」大隱繁華，下樓就到興南夜市全聯、燦坤、屈臣氏等，從早到晚都多采多姿咫尺同享，享受簡單快速的庶民幸福</p>
+                    </figcaption>
+                </figure>
+                
+            </div>
+
+            <div class="row">
+                <figure>
+                   <img src="image/Dongli_img/dachiPark.jpg" alt="">
+                    <figcaption>
+                        <h3>親山遊憩</h3>
+                        <p class="fontSetting">大自然是它們的家，從庇護山林的大冠鷲、稀有保育類的台北樹蛙、到華麗羽翼的台灣藍鵲，台北市的半隱秘境：明星生態區，稀有原生物種的棲息地</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                   <img src="image/Dongli_img/threeElementary.jpg" alt="">
+                    <figcaption>
+                        <h3>菁英搖籃</h3>
+                        <p class="fontSetting">靜心、再興中小學、木柵國小、政大附中 、萬芳高中、政治大學、台灣戲曲學院，從小學到大學，從知識到藝術，這裡堪稱台北市最完善的黃金教育軸帶</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
         <section class="container" id="designTeam"></section>
-        <section class="container" id="slider"></section>
+        <section class="container" id="slider">
+            <h2 class="mainTitle">滿城繁華半城靜 一座莊園墅萬坪</h2>
+        </section>
         <section class="container" id="panoramic"></section>
         <section class="container" id="contact"></section>
         <footer></footer>
