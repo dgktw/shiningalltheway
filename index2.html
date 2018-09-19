@@ -32,6 +32,19 @@
             var targetTop = $(snippet).offset().top;
             $('body,html').animate({'scrollTop':targetTop},1000);
         });
+        function changeText(){
+            if($(window).innerWidth() < 500){
+               $('#slider .mainTitle').html('滿城繁華半城靜<br>一座莊園墅萬坪');
+               $('#feature .mainTitle').html('都市裡的大自然依山傍溪<br>101在身邊');
+               $('#timing .mainTitle').html('南勢角、景平<br>雙捷運暢行雙北');
+                console.log('jjj');
+            }
+            
+        }
+        changeText();
+        $(window).resize(function(){
+            changeText();
+        })
     })
     </script>
     <style>
@@ -157,7 +170,7 @@
             nav>div>a{margin:0 auto;}
         }
         @media (max-width:767px){
-            #timing .row{flex-wrap: wrap;margin: 70px 0 100px;;}
+            #timing .row{flex-wrap: wrap;margin: 50px 0 100px;;}
         /*0919 timing setting--------------------------------------------------*/
             #timing .item{width: 45%;margin-bottom: 50px;padding-bottom: 20px;}
             #timing .symbol{display: none;}
@@ -190,7 +203,7 @@
         /*0919 feature setting-------------------------------------------------*/
             #feature figcaption{width: 100%;}
         /*0919 contact setting-------------------------------------------------*/
-            .mainTitle{font-size: 1.25rem;}
+            .mainTitle{font-size: 1.25rem;line-height: 1.8;}
             
             #contact .content p{font-size: 1.25rem;}
             #contact .headInfo{display: block;text-align: center;}
@@ -334,6 +347,8 @@
         </section>
         <section class="container" id="panoramic">
 <!--            <div>iframe</div>-->
+        </section>
+        <section class="container" id="lifeFunction">
         </section>
         <section class="container" id="contact">
             <h2 class="mainTitle">立即預約賞屋</h2>
