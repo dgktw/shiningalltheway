@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="八橋龍首地位，坐擁台北橋．新北門戶第一站！雄踞三和生活圈，東三重，利財旺－喬遷東利八方，誌喜大利八方！先建後售，品質可鑑，大利安心!">
+    <meta name="keywords" content="東利八方，東利八方賞屋資訊">
+    <title>東利八方_八橋龍首地位，坐擁台北橋．新北門戶第一站！</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="garand-sticky-73b0fbe/jquery.sticky.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+    $(function(){
+        $('header').sticky({topSpacing:0});
+        $('.slider').bxSlider({
+            auto: true
+            ,slideWidth: 880
+            ,speed:1000 //轉場時間
+            ,pause:2800 //每張持續的時間
+        });
+        
+        $('nav ul li').on('click',function(){
+//            var num = $(this).index();
+            var snippet = $(this).children('a').attr('href');
+            var targetTop = $(snippet).offset().top;
+            console.log(targetTop);
+            $('body,html').animate({'scrollTop':targetTop},1000);
+        });
+    })
+    </script>
+    <style>
+        /*全域設定    ==================================================================*/
+        :root{
+            --main-black:#333;
+            --main-red:#b50029;
+            --main-subred:#dd0032;
+        }
+        *{padding: 0;margin: 0;font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體', sans-serif;outline: none;color: var(--main-black);}
+        body,html{background-color: #fff;}
+        a,a:hover{text-decoration: none;}
+        ul,li{list-style: none;}
+        .container{padding:0 50px;margin-bottom: 100px;text-align: center;}
+        .fontSetting{letter-spacing: 0.15rem;line-height: 1.8;}
+        .mainTitle{ margin-bottom: 30px;position: relative;display: inline-block;letter-spacing: .2rem;}
+        .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
+        .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
+        /*header設定  ==================================================================*/
+        header{background-color: #fff;}
+        nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
+        nav>div{float: left;padding-left: 15px;}    
+        nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
+        nav ul{overflow: hidden;float: right;letter-spacing: .12rem;}
+        nav ul li{float: left;padding: 15px;}
+        nav ul li a{transition: 0.2s;font-weight: bold;}
+        nav ul li a:active,nav ul li:hover a{color: var(--main-subred);}
+        
+        /*heroImage  ================================================================*/
+        #heroImage .normalText{color: #fff;}
+        #heroImage>div{position: relative;}
+        #heroImage .textWrapper{position: absolute;left: 0;top: 0;}
+        #heroImage .topImage{background: url(image/Dongli_img/_D8A2747.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
+        #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
+        #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
+        
+        /*heroImage RWD設定  ========================================================*/
+        
+        
+        /*timing   ================================================================*/
+        #timing{max-width: 1200px;margin-left: auto;margin-right: auto;}
+        #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 70px 0 150px;}
+        #timing .item{display: flex;align-items: center;justify-content:center;}
+        #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red);}
+        #timing .content{margin-right:20px;width: 180px;}
+        #timing .symbol{margin-left: 20px;font-size: 40px;}
+        #timing .distance{text-align: center;margin-bottom: 10px;}
+        #timing .place{text-align: center;}
+        /*feature  ================================================================*/
+        #feature .row{padding-bottom: 130px;overflow: hidden;}
+        #feature .row:nth-of-type(1){margin-bottom: 50px;}
+        #feature figure{width: 50%;float: left;position: relative;}
+        #feature figure img{width: 100%;}
+        #feature figcaption{background-color:#fff;width: 80%;margin: 0 auto;padding: 30px 50px;height: 57%;box-sizing: border-box;position: absolute;left: 50%;bottom: -30%;transform: translate(-50%,0);}
+        #feature figcaption h3{text-align: center;margin-bottom: 15px;color: var(--main-red);}
+        
+        /*slider設定      ============================================================*/
+/*
+        #slider{position: relative;}
+        #slider::before{content: '';width: 100%; background-color: var(--main-red);max-width: 1200px;position: absolute;height: 500px;display: inline-block;top: 150px;left: 50%;transform: translateX(-50%);}
+*/
+        #slider .bx-wrapper{margin: 0 auto;border:none;box-shadow: none;}
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{bottom: 30px;}
+        /*change color*/
+        .bx-wrapper .bx-pager.bx-default-pager a{background-color: #fff;}
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
+            background-color: var(--main-red);
+        }
+        .bx-wrapper .bx-controls-direction a{top: auto;margin-top:0;bottom: 0;}
+        .bx-wrapper .bx-next{background-image: url(image/Dongli_img/001-right-arrow.svg);right: 0;}
+        .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/002-left-arrow.svg);left: 0;}
+        .bx-wrapper .bx-prev,.bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
+        .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus,.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus{background-position: center;}
+        
+        /*contact設定      ============================================================*/
+        #contact .row{margin-bottom: 50px;}
+        #contact .content{text-align: left;}
+        #contact .content>a{background: url(image/Dongli_img/logo.png) center;display: block;width: 235px;height: 100px;background-size: cover;margin-bottom: 30px;}
+        #contact .content p{font-size: 1.8rem;margin-bottom: 50px;letter-spacing: 0.2rem;line-height: 1.8;}
+        #contact .content p span{position: relative;}
+        #contact .content p span::after{content: ''; position: absolute;width: 100%;height: 2px;background-color: var(--main-black);bottom: 0;left: 0;}
+        #contact .row{display: flex;}
+        #contact .info,#contact form{width: 50%;}
+        #contact form{padding-left: 15px;}
+        #contact .info{padding-right: 15px;}
+        #contact li{padding:10px 0;}
+        #contact li>div{display: inline-block;margin-left: 25px;white-space: normal}
+        #contact .headInfo{color:var(--main-red); }
+        #contact li:nth-of-type(1) .headInfo + span{margin-left: 60px;}
+        #contact .headInfo + span{margin-left: 25px;}
+        #contact label{display: block;padding: 10px 0;}
+        #contact label input{width:calc(100% - 100px);border: none;border-bottom: 1px solid #666;margin-left: 25px;}
+        #contact .hide{color: transparent;}
+        #contact #submit{padding: 15px 0;border: none;background-color:var(--main-black);color: #fff;margin:25px 0 0 20px;letter-spacing: 0.3rem;}
+        #contact iframe{width: 100%;}
+        /*header RWD設定  ============================================================*/
+        footer{text-align: center;margin-bottom: 30px;position: relative;}
+        
+        @media (max-width:1024px){
+            .container{padding: 0 30px;}
+            .fontSetting {font-size: 0.875rem;letter-spacing: 0.1rem;}
+            #heroImage .topImage{height: 500px;}
+            #feature figcaption{height: 100%;bottom:-75%;}
+        }
+        @media (max-width:1023px){
+            #contact .info{width: 55%;}
+            #contact form{width: 45%;}
+            #timing .content{margin-right: 0;width: 170px;}
+            #timing .symbol{margin-left: 0;}
+            #timing .firstLetter{font-size: 48px;margin-right: 15px;}
+            /*0919 feature setting-------------------------------------------------*/
+            #feature .row{padding: 0;margin: 0;}
+            #feature .row:nth-of-type(1){margin-bottom: 0;}
+            #feature figure{height: 400px;}
+            #feature figcaption{z-index: 5;height: 35%;bottom:20%;}
+        }
+        @media (max-width:900px){#feature figcaption{padding: 20px 30px;}}
+        @media (max-width:768px){
+        /*header RWD設定  ============================================================*/
+            nav{text-align: center;margin:25px 0 0;}
+            nav>div,nav ul{float: none;}
+            nav ul{display: inline-block;margin-top: 10px;}
+            nav>div>a{margin:0 auto;}
+        }
+        @media (max-width:767px){
+            #timing .row{flex-wrap: wrap;}
+            #timing .item{width: 50%;}
+            /*0919 feature setting-------------------------------------------------*/
+            #feature .row{overflow:visible;}
+            #feature figure{float: none;width: 100%;height:100%;margin-bottom: 70px;}
+            #feature figcaption{bottom: 5%;position: static;transform: translate(0,0);padding: 20px 0;}
+            /*0919 contact setting-------------------------------------------------*/
+        }
+
+        @media (max-width:500px){
+        /*header RWD設定  ============================================================*/
+            nav ul{margin: 0;}
+            nav ul li{padding:10px 6px 15px;}
+            nav ul li a{font-size: 0.76rem;}
+        /*其他區域RWD設定  ============================================================*/
+            .container{padding: 0 20px;}
+            #heroImage .topImage{height: 350px;}
+            /*0919 feature setting-------------------------------------------------*/
+            #feature figcaption{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid outerCotainer">
+        <header>
+            <nav>
+                <div>
+                    <a href="index.html" id="logo"></a>
+                </div>
+                <ul>
+                    <li><a href="#timing">生活交通</a></li>
+                    <li><a href="#feature">宅院特色</a></li>
+<!--                    <li><a href="#designTeam">建築團隊</a></li>-->
+                    <li><a href="#slider">外觀設計</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container" id="heroImage">
+            <div>
+                <div class="topImage"></div>
+                <div class="textWrapper fontSetting">
+                    <div class="textGroup">
+                       <span class="normalText">羨慕美式別墅社區的生活嗎?</span>
+                    </div>
+                    <div class="textGroup">
+                        <span class="normalText">想遠離都市來個小旅行嗎?</span>
+                    </div>                   
+                    <div class="textGroup">
+                       <span class="whiteBgText">歡迎來到「東利八方」</span>
+                    </div>                   
+                    <div class="textGroup">
+                        <span class="whiteBgText">找你要的家</span>
+                    </div>
+                </div>
+                <div class="reservation"><span>立即<br>預約</span></div>
+            </div>
+        </section>
+        <section class="container" id="timing">
+            <h2 class="mainTitle">南勢角、景平雙捷運暢行雙北</h2>
+            <div class="row">
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap fontSetting">
+                                <span class="firstLetter">50</span>公尺
+                            </div>
+                        </div>
+                        <div class="place fontSetting">步行抵達三和夜市</div>
+                    </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap fontSetting">
+                                <span class="firstLetter">200</span>公尺</div>
+                            </div>
+                        <div class="place fontSetting">開車抵達台北橋</div>
+                    </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap fontSetting">
+                                <span class="firstLetter">250</span>公尺
+                            </div>
+                        </div>
+                        <div class="place fontSetting">步行抵達台北橋站</div>
+                    </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap fontSetting">
+                                <span class="firstLetter">700</span>公尺
+                            </div>
+                        </div>
+                        <div class="place fontSetting">步行抵達三重國小站</div>
+                    </div>
+                    <div class="symbol"></div>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="feature">
+            <h2 class="mainTitle">都市裡的大自然依山傍溪 101在身邊</h2>
+            <div class="row">
+                <figure>
+                   <img src="image/Dongli_img/mrt.jpg" alt="">
+                    <figcaption>
+                        <h3>交通樞紐</h3>
+                        <p class="fontSetting">全民保健時代來臨，國家級醫學中心：台北市立萬芳醫院，權威醫療，安心加倍。運動中心、泳池、球場、健身房、舞蹈教室、羽球場…天天運動，保持年輕。</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                   <img src="image/Dongli_img/nightMarket1.jpg" alt="">
+                    <figcaption>
+                        <h3>繁華日常</h3>
+                        <p class="fontSetting">「双捷晶華」大隱繁華，下樓就到興南夜市全聯、燦坤、屈臣氏等，從早到晚都多采多姿咫尺同享，享受簡單快速的庶民幸福。</p>
+                    </figcaption>
+                </figure>
+                
+            </div>
+
+            <div class="row">
+                <figure>
+                   <img src="image/Dongli_img/dachiPark.jpg" alt="">
+                    <figcaption>
+                        <h3>親山遊憩</h3>
+                        <p class="fontSetting">大自然是它們的家，從庇護山林的大冠鷲、稀有保育類的台北樹蛙、到華麗羽翼的台灣藍鵲，台北市的半隱秘境：明星生態區，稀有原生物種的棲息地。</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                   <img src="image/Dongli_img/threeElementary.jpg" alt="">
+                    <figcaption>
+                        <h3>菁英搖籃</h3>
+                        <p class="fontSetting">靜心、再興中小學、木柵國小、政大附中 、萬芳高中、政治大學、台灣戲曲學院，從小學到大學，從知識到藝術，這裡堪稱台北市最完善的黃金教育軸帶。</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+<!--        <section class="container" id="designTeam"></section>-->
+        <section class="container" id="slider">
+            <h2 class="mainTitle">滿城繁華半城靜 一座莊園墅萬坪</h2>
+            <div class="slider">
+                <div><img src="image/Dongli_img/_D8A5804.jpg" alt="slider image1"></div>
+                <div><img src="image/Dongli_img/_D8A5825.jpg" alt="slider image2"></div>
+                <div><img src="image/Dongli_img/_D8A5894.jpg" alt="slider image3"></div>
+                <div><img src="image/Dongli_img/_D8A5907.jpg" alt="slider image4"></div>
+                <div><img src="image/Dongli_img/_D8A5937.jpg" alt="slider image5"></div>
+            </div>
+        </section>
+        <section class="container" id="panoramic">
+<!--            <div>iframe</div>-->
+        </section>
+        <section class="container" id="contact">
+            <h2 class="mainTitle">立即預約賞屋</h2>
+            <div class="content">
+                <a href="javascript:;"></a>
+                <p><span>歡迎與我們立即聯絡</span><br><span>我們隨時為您提供最佳服務</span></p>
+                <div class="row">
+                    <div class="info">
+                        <ul class="fontSetting">
+                            <li>
+                                <span class="headInfo fontSetting">電話</span>
+                                <span>(02)2975-8666</span>
+                            </li>
+                            <li>
+                                <span class="headInfo fontSetting">接待中心</span>
+                                <span>新北市三重區福德北路26號</span>
+                            </li>
+                            <li>
+                                <span class="headInfo">基地位置</span>
+                                <span>三重區中央北路37號、27巷16、18號</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="fontSetting" action="" method="get" name="contactForm" id="contactForm">
+                        <label><span>您的姓名</span><input type="text"></label>
+                        <label><span>您的電話</span><input type="text"></label>
+                        <label><span>您的信箱</span><input type="text"></label>
+                        <label class="buttonCon">
+                            <span class="hide">您的按鈕</span>
+                            <input class="fontSetting" type="submit" value="確認預約" name="submit" id="submit">
+                        </label>
+                    </form>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.09537953988!2d121.49996651418266!3d25.06475618395796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a922dece864d%3A0x24d7ed2773e96cc4!2z5p2x5Yip5YWr5pa5LeeGsemKt-W7uuahiA!5e0!3m2!1szh-TW!2stw!4v1537259698119" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <footer>COPYRIGHT © 2018</footer>
+    </div>
+</body>
+</html>
