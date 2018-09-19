@@ -23,10 +23,13 @@
         });
         
         $('nav ul li').on('click',function(){
-//            var num = $(this).index();
             var snippet = $(this).children('a').attr('href');
             var targetTop = $(snippet).offset().top;
-            console.log(targetTop);
+            $('body,html').animate({'scrollTop':targetTop},1000);
+        });
+        $('#heroImage .reservation').on('click',function(){
+            var snippet = $(this).attr('href');
+            var targetTop = $(snippet).offset().top;
             $('body,html').animate({'scrollTop':targetTop},1000);
         });
     })
@@ -48,7 +51,7 @@
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
         /*header設定  ==================================================================*/
-        header{background-color: #fff;}
+        header{background-color: #fff;position: relative;z-index: 10000;}
         nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
         nav>div{float: left;padding-left: 15px;}    
         nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
@@ -154,13 +157,24 @@
             nav>div>a{margin:0 auto;}
         }
         @media (max-width:767px){
-            #timing .row{flex-wrap: wrap;}
-            #timing .item{width: 50%;}
-            /*0919 feature setting-------------------------------------------------*/
+            #timing .row{flex-wrap: wrap;margin: 70px 0 100px;;}
+        /*0919 timing setting--------------------------------------------------*/
+            #timing .item{width: 45%;margin-bottom: 50px;padding-bottom: 20px;}
+            #timing .symbol{display: none;}
+        /*0919 feature setting-------------------------------------------------*/
             #feature .row{overflow:visible;}
             #feature figure{float: none;width: 100%;height:100%;margin-bottom: 70px;}
             #feature figcaption{bottom: 5%;position: static;transform: translate(0,0);padding: 20px 0;}
-            /*0919 contact setting-------------------------------------------------*/
+        /*0919 contact setting-------------------------------------------------*/
+            #contact .content{text-align: center;}
+            #contact .content>a{margin: 0 auto 30px;}
+            #contact .row{flex-wrap: wrap;}
+            #contact .info{margin-bottom: 30px;}
+            #contact .info,#contact form{width:100%;padding: 0;}
+            #contact .hide{display: none;}
+            #contact #submit{margin:25px auto 0;display: block;}
+        /*0919 mainTitle setting-------------------------------------------------*/
+            .mainTitle::before,.mainTitle::after{display: none;}
         }
 
         @media (max-width:500px){
@@ -171,8 +185,18 @@
         /*其他區域RWD設定  ============================================================*/
             .container{padding: 0 20px;}
             #heroImage .topImage{height: 350px;}
-            /*0919 feature setting-------------------------------------------------*/
+        /*0919 feature setting-------------------------------------------------*/
+            #timing .item{width: 95%;}
+        /*0919 feature setting-------------------------------------------------*/
             #feature figcaption{width: 100%;}
+        /*0919 contact setting-------------------------------------------------*/
+            .mainTitle{font-size: 1.25rem;}
+            
+            #contact .content p{font-size: 1.25rem;}
+            #contact .headInfo{display: block;text-align: center;}
+            #contact .headInfo + span{display: block;margin: 0;text-align: center;}
+            #contact li{margin-bottom: 15px;}
+            #contact li:nth-of-type(1) .headInfo + span{margin: 0;}
         }
     </style>
 </head>
@@ -209,7 +233,7 @@
                         <span class="whiteBgText">找你要的家</span>
                     </div>
                 </div>
-                <div class="reservation"><span>立即<br>預約</span></div>
+                <a href="#contact" class="reservation"><span>立即<br>預約</span></a>
             </div>
         </section>
         <section class="container" id="timing">
