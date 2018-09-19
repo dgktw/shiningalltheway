@@ -17,7 +17,7 @@
         $('header').sticky({topSpacing:0});
         $('.slider').bxSlider({
             auto: true
-            ,slideWidth: 880
+            ,slideWidth: 1000
             ,speed:1000 //轉場時間
             ,pause:2800 //每張持續的時間
         });
@@ -58,13 +58,13 @@
         body,html{background-color: #fff;}
         a,a:hover{text-decoration: none;}
         ul,li{list-style: none;}
-        .container{padding:0 50px;margin-bottom: 100px;text-align: center;}
+        .container{padding:0 50px;margin-bottom: 150px;text-align: center;}
         .fontSetting{letter-spacing: 0.15rem;line-height: 1.8;}
         .mainTitle{ margin-bottom: 30px;position: relative;display: inline-block;letter-spacing: .2rem;}
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
         /*header設定  ==================================================================*/
-        header{background-color: #fff;position: relative;z-index: 10000;}
+        header{background-color: #fff;position: relative;z-index: 10000;padding-bottom: 3px;}
         nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
         nav>div{float: left;padding-left: 15px;}    
         nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
@@ -74,10 +74,11 @@
         nav ul li a:active,nav ul li:hover a{color: var(--main-subred);}
         
         /*heroImage  ================================================================*/
-        #heroImage .normalText{color: #fff;}
+        #heroImage .normalText{color:var(--main-black);display: inline-block;margin-bottom: 10px;}
+        #heroImage .whiteBgText{color:#fff;background-color:var(--main-red);padding: 7px 15px;margin-bottom: 10px;display: inline-block;letter-spacing: .3rem;}
         #heroImage>div{position: relative;}
-        #heroImage .textWrapper{position: absolute;left: 0;top: 0;}
-        #heroImage .topImage{background: url(image/Dongli_img/_D8A2747.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
+        #heroImage .textWrapper{position: absolute;left:80px;bottom: 50px;text-align: left;}
+        #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
         #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
         
@@ -99,7 +100,7 @@
         #feature figure{width: 50%;float: left;position: relative;}
         #feature figure img{width: 100%;}
         #feature figcaption{background-color:#fff;width: 80%;margin: 0 auto;padding: 30px 50px;height: 57%;box-sizing: border-box;position: absolute;left: 50%;bottom: -30%;transform: translate(-50%,0);}
-        #feature figcaption h3{text-align: center;margin-bottom: 15px;color: var(--main-red);}
+        #feature figcaption h3{text-align: center;margin-bottom: 20px;color: var(--main-red);letter-spacing: 0.15rem;}
         
         /*slider設定      ============================================================*/
 /*
@@ -119,7 +120,14 @@
         .bx-wrapper .bx-prev,.bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
         .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus,.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus{background-position: center;}
         
-        /*contact設定      ============================================================*/
+        /*lifeFunction設定     ===========================================*/
+        #lifeFunction .row{overflow: hidden;}
+        #lifeFunction img{width: 50%;height: auto;float: left;box-sizing: border-box;}
+/*
+        #lifeFunction img:nth-child(1){padding-right: 15px;}
+        #lifeFunction img:nth-child(2){padding-left: 15px;}
+*/
+        /*contact設定      ===============================================*/
         #contact .row{margin-bottom: 50px;}
         #contact .content{text-align: left;}
         #contact .content>a{background: url(image/Dongli_img/logo.png) center;display: block;width: 235px;height: 100px;background-size: cover;margin-bottom: 30px;}
@@ -234,23 +242,24 @@
                 <div class="topImage"></div>
                 <div class="textWrapper fontSetting">
                     <div class="textGroup">
-                       <span class="normalText">羨慕美式別墅社區的生活嗎?</span>
+                       <span class="normalText">新北門戶第一站</span>
                     </div>
                     <div class="textGroup">
-                        <span class="normalText">想遠離都市來個小旅行嗎?</span>
+                        <span class="normalText">比鄰晴光商圈、台北橋</span>
                     </div>                   
                     <div class="textGroup">
-                       <span class="whiteBgText">歡迎來到「東利八方」</span>
+                       <span class="whiteBgText">「東利八方」位居龍首地位，雄踞三和生活圈!
+                    </span>
                     </div>                   
                     <div class="textGroup">
-                        <span class="whiteBgText">找你要的家</span>
+                        <span class="whiteBgText">品質可鑑，公道好厝，至安心!</span>
                     </div>
                 </div>
                 <a href="#contact" class="reservation"><span>立即<br>預約</span></a>
             </div>
         </section>
         <section class="container" id="timing">
-            <h2 class="mainTitle">南勢角、景平雙捷運暢行雙北</h2>
+            <h2 class="mainTitle">雙捷運站 = 雙贏</h2>
             <div class="row">
                 <div class="item">
                     <div class="content">
@@ -298,20 +307,20 @@
             </div>
         </section>
         <section class="container" id="feature">
-            <h2 class="mainTitle">都市裡的大自然依山傍溪 101在身邊</h2>
+            <h2 class="mainTitle">崗石城堡．固若金湯</h2>
             <div class="row">
                 <figure>
-                   <img src="image/Dongli_img/mrt.jpg" alt="">
+                   <img src="image/Dongli_img/gym1.jpg" alt="">
                     <figcaption>
-                        <h3>交通樞紐</h3>
-                        <p class="fontSetting">全民保健時代來臨，國家級醫學中心：台北市立萬芳醫院，權威醫療，安心加倍。運動中心、泳池、球場、健身房、舞蹈教室、羽球場…天天運動，保持年輕。</p>
+                        <h3>有氧GYM<br>全員運動活力泉源</h3>
+                        <p class="fontSetting">血液循環充沛帶氧，提高心跳速度。一年四季、不分晴雨，在家便能紓壓、解憂。</p>
                     </figcaption>
                 </figure>
                 <figure>
-                   <img src="image/Dongli_img/nightMarket1.jpg" alt="">
+                   <img src="image/Dongli_img/yoga1.jpg" alt="">
                     <figcaption>
-                        <h3>繁華日常</h3>
-                        <p class="fontSetting">「双捷晶華」大隱繁華，下樓就到興南夜市全聯、燦坤、屈臣氏等，從早到晚都多采多姿咫尺同享，享受簡單快速的庶民幸福。</p>
+                        <h3>瑜珈室<br>動靜自如</h3>
+                        <p class="fontSetting">在瑜珈動靜之間，捕捉長壽之道。造細胞生命之源，增加肌耐力與柔軟度。</p>
                     </figcaption>
                 </figure>
                 
@@ -319,36 +328,41 @@
 
             <div class="row">
                 <figure>
-                   <img src="image/Dongli_img/dachiPark.jpg" alt="">
+                   <img src="image/Dongli_img/riverBank.jpg" alt="">
                     <figcaption>
-                        <h3>親山遊憩</h3>
-                        <p class="fontSetting">大自然是它們的家，從庇護山林的大冠鷲、稀有保育類的台北樹蛙、到華麗羽翼的台灣藍鵲，台北市的半隱秘境：明星生態區，稀有原生物種的棲息地。</p>
+                        <h3>翠堤美健康行<br>河濱樂嬉遊記</h3>
+                        <p class="fontSetting">近[河濱公園]、[開元公園]，[信義公園]。溜冰場、籃球場、羽球場…等，綠帶自然相伴，健康可得！
+                        </p>
                     </figcaption>
                 </figure>
                 <figure>
-                   <img src="image/Dongli_img/threeElementary.jpg" alt="">
+                   <img src="image/Dongli_img/library1.jpg" alt="">
                     <figcaption>
-                        <h3>菁英搖籃</h3>
-                        <p class="fontSetting">靜心、再興中小學、木柵國小、政大附中 、萬芳高中、政治大學、台灣戲曲學院，從小學到大學，從知識到藝術，這裡堪稱台北市最完善的黃金教育軸帶。</p>
+                        <h3>舒心書香圖書室<br>人文格調</h3>
+                        <p class="fontSetting">孩子閱讀靜心空間，難得。<br>社區人文素養，無價。</p>
                     </figcaption>
                 </figure>
             </div>
         </section>
 <!--        <section class="container" id="designTeam"></section>-->
         <section class="container" id="slider">
-            <h2 class="mainTitle">滿城繁華半城靜 一座莊園墅萬坪</h2>
+            <h2 class="mainTitle">三和商圈 繁華取靜</h2>
             <div class="slider">
-                <div><img src="image/Dongli_img/_D8A5804.jpg" alt="slider image1"></div>
-                <div><img src="image/Dongli_img/_D8A5825.jpg" alt="slider image2"></div>
-                <div><img src="image/Dongli_img/_D8A5894.jpg" alt="slider image3"></div>
-                <div><img src="image/Dongli_img/_D8A5907.jpg" alt="slider image4"></div>
-                <div><img src="image/Dongli_img/_D8A5937.jpg" alt="slider image5"></div>
+                <div><img src="image/Dongli_img/pic1.jpg" alt="slider image1"></div>
+                <div><img src="image/Dongli_img/pic2.jpg" alt="slider image2"></div>
+                <div><img src="image/Dongli_img/pic3.jpg" alt="slider image3"></div>
+                <div><img src="image/Dongli_img/pic4.jpg" alt="slider image4"></div>
+                <div><img src="image/Dongli_img/pic5.jpg" alt="slider image5"></div>
             </div>
         </section>
         <section class="container" id="panoramic">
 <!--            <div>iframe</div>-->
         </section>
         <section class="container" id="lifeFunction">
+            <div class="row">
+                <img src="image/Dongli_img/lifeFunction_1.jpg" alt="">
+                <img src="image/Dongli_img/lifeFunction_2.jpg" alt="">
+            </div>
         </section>
         <section class="container" id="contact">
             <h2 class="mainTitle">立即預約賞屋</h2>
