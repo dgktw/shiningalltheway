@@ -34,10 +34,9 @@
         });
         function changeText(){
             if($(window).innerWidth() < 500){
-               $('#slider .mainTitle').html('滿城繁華半城靜<br>一座莊園墅萬坪');
-               $('#feature .mainTitle').html('都市裡的大自然依山傍溪<br>101在身邊');
-               $('#timing .mainTitle').html('南勢角、景平<br>雙捷運暢行雙北');
-                console.log('jjj');
+//               $('#slider .mainTitle').html('滿城繁華半城靜<br>一座莊園墅萬坪');
+//               $('#feature .mainTitle').html('都市裡的大自然依山傍溪<br>101在身邊');
+//               $('#timing .mainTitle').html('南勢角、景平<br>雙捷運暢行雙北');
             }
             
         }
@@ -196,8 +195,17 @@
             #contact #submit{margin:25px auto 0;display: block;}
         /*0919 mainTitle setting-------------------------------------------------*/
             .mainTitle::before,.mainTitle::after{display: none;}
+        /*0919 heroImage        -------------------------------------------------*/
+            #heroImage .textWrapper{left: 50px;}
         }
 
+        @media (max-width:600px){
+            #heroImage .textWrapper{left: 50%;bottom: 50%;transform: translate(-50%,55%);text-align: center;width: 100%;}
+            #heroImage .normalText{color:#fff;text-shadow: 1px 1px 2px #000;font-size: 1rem;}
+            #heroImage .whiteBgText{color:#fff;text-shadow: 1px 1px 2px #000;background: none;letter-spacing: 0.1rem;line-height: 1.8;padding: 0;font-size: 1rem;}
+            #heroImage .reservation{right: auto;left: 50%;bottom: 0;transform: translate(-50%,50%);width: 80px;height: 80px;}
+            #heroImage .reservation span{transform:translate(-80%,-50%)}
+        }
         @media (max-width:500px){
         /*header RWD設定  ============================================================*/
             nav ul{margin: 0;}
@@ -248,11 +256,14 @@
                         <span class="normalText">比鄰晴光商圈、台北橋</span>
                     </div>                   
                     <div class="textGroup">
-                       <span class="whiteBgText">「東利八方」位居龍首地位，雄踞三和生活圈!
+                        <span class="normalText">雄踞三和生活圈</span>
+                    </div>                   
+                    <div class="textGroup">
+                       <span class="whiteBgText">「東利八方」位居龍首
                     </span>
                     </div>                   
                     <div class="textGroup">
-                        <span class="whiteBgText">品質可鑑，公道好厝，至安心!</span>
+                        <span class="whiteBgText">品質可鑑至安心!</span>
                     </div>
                 </div>
                 <a href="#contact" class="reservation"><span>立即<br>預約</span></a>
@@ -307,7 +318,7 @@
             </div>
         </section>
         <section class="container" id="feature">
-            <h2 class="mainTitle">崗石城堡．固若金湯</h2>
+            <h2 class="mainTitle">崗石城堡 固若金湯</h2>
             <div class="row">
                 <figure>
                    <img src="image/Dongli_img/gym1.jpg" alt="">
@@ -331,7 +342,7 @@
                    <img src="image/Dongli_img/riverBank.jpg" alt="">
                     <figcaption>
                         <h3>翠堤美健康行<br>河濱樂嬉遊記</h3>
-                        <p class="fontSetting">近[河濱公園]、[開元公園]，[信義公園]。溜冰場、籃球場、羽球場…等，綠帶自然相伴，健康可得！
+                        <p class="fontSetting">近河濱公園、開元公園，信義公園。溜冰場、籃球場、羽球場…等，綠帶自然相伴，健康可得！
                         </p>
                     </figcaption>
                 </figure>
