@@ -100,6 +100,8 @@
         #timing .distance{text-align: center;margin-bottom: 10px;}
         #timing .place{text-align: center;position: relative;display: inline-block;}
         #timing .place::after{content: '';display: block;background-color: var(--main-black);width: 100%;height: 1.5px;position: absolute;left: 0;bottom: 0;}
+        #timing .downArrow{display: none;}
+        
         /*feature  ================================================================*/
         #feature .row{padding-bottom: 130px;overflow: hidden;}
         #feature .row:nth-of-type(1){margin-bottom: 50px;}
@@ -121,8 +123,8 @@
             background-color: var(--main-red);
         }
         .bx-wrapper .bx-controls-direction a{top: auto;margin-top:0;bottom: 0;}
-        .bx-wrapper .bx-next{background-image: url(image/Dongli_img/001-right-arrow.svg);right: 0;}
-        .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/002-left-arrow.svg);left: 0;}
+        .bx-wrapper .bx-next{background-image: url(image/Dongli_img/right-arrow.svg);right: 0;}
+        .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/left-arrow.svg);left: 0;}
         .bx-wrapper .bx-prev,.bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
         .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus,.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus{background-position: center;}
         
@@ -139,7 +141,7 @@
         #contact .content>a{background: url(image/Dongli_img/logo.png) center;display: block;width: 235px;height: 100px;background-size: cover;margin-bottom: 30px;}
         #contact .content p{font-size: 1.8rem;margin-bottom: 50px;letter-spacing: 0.2rem;line-height: 1.8;}
         #contact .content p span{position: relative;}
-        #contact .content p span::after{content: ''; position: absolute;width: 100%;height: 1px;background-color: var(--main-black);bottom: 0;left: 0;}
+        #contact .content p span::after{content: ''; position: absolute;width: 100%;height: 1.5px;background-color: var(--main-black);bottom: 0;left: 0;}
         #contact .row{display: flex;}
         #contact .info,#contact form{width: 50%;}
         #contact form{padding-left: 15px;}
@@ -225,7 +227,8 @@
             .container{padding: 0 20px;}
             #heroImage .topImage{height: 350px;}
         /*0919 feature setting-------------------------------------------------*/
-            #timing .item{width: 95%;}
+            #timing .item{width: 95%;margin-bottom: 40px;}
+            #timing .downArrow{display: block; background-image: url(image/Dongli_img/right-arrowBlack.svg);width: 30px;height: 30px;transform: rotate(90deg);margin-bottom: 40px;}
         /*0919 feature setting-------------------------------------------------*/
             #feature figcaption{width: 100%;}
         /*0919 contact setting-------------------------------------------------*/
@@ -295,6 +298,7 @@
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
+                <div class="downArrow"></div>
                 <div class="item">
                     <div class="content">
                         <div class="distance">
@@ -305,6 +309,7 @@
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
+                <div class="downArrow"></div>
                 <div class="item">
                     <div class="content">
                         <div class="distance">
@@ -316,6 +321,7 @@
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
+                <div class="downArrow"></div>
                 <div class="item">
                     <div class="content">
                         <div class="distance">
