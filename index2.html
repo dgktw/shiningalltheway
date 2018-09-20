@@ -43,6 +43,10 @@
         changeText();
         $(window).resize(function(){
             changeText();
+        });
+        $('nav ul li a').on('click',function(){
+            $('nav ul li a').removeClass('active');
+            $(this).addClass('active');
         })
     })
     </script>
@@ -51,7 +55,7 @@
         :root{
             --main-black:#333;
             --main-red:#b50029;
-            --main-subred:#dd0032;
+            --main-subred:#c4002c;
         }
         *{padding: 0;margin: 0;font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體', sans-serif;outline: none;color: var(--main-black);}
         body,html{background-color: #fff;}
@@ -63,20 +67,22 @@
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
         /*header設定  ==================================================================*/
-        header{background-color: #fff;position: relative;z-index: 10000;padding-bottom: 3px;}
+        header{background-color: #fff;position: relative;z-index: 10000;padding-bottom: 3px;border-bottom: 1px solid #ccc;}
         nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
         nav>div{float: left;padding-left: 15px;}    
         nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
         nav ul{overflow: hidden;float: right;letter-spacing: .12rem;}
         nav ul li{float: left;padding: 15px;}
         nav ul li a{transition: 0.2s;font-weight: bold;}
-        nav ul li a:active,nav ul li:hover a{color: var(--main-subred);}
+        nav ul li:hover a{color: var(--main-subred);}
+        nav ul li a.active{color: var(--main-subred);}
         
         /*heroImage  ================================================================*/
         #heroImage .normalText{color:var(--main-black);display: inline-block;margin-bottom: 10px;}
         #heroImage .whiteBgText{color:#fff;background-color:var(--main-red);padding: 7px 15px;margin-bottom: 10px;display: inline-block;letter-spacing: .3rem;}
         #heroImage>div{position: relative;}
         #heroImage .textWrapper{position: absolute;left:80px;bottom: 50px;text-align: left;}
+        #heroImage .textWrapper2{display: none;}
         #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
         #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
@@ -201,10 +207,13 @@
 
         @media (max-width:600px){
             #heroImage .textWrapper{left: 50%;bottom: 50%;transform: translate(-50%,55%);text-align: center;width: 100%;}
-            #heroImage .normalText{color:#fff;text-shadow: 1px 1px 2px #000;font-size: 1rem;}
-            #heroImage .whiteBgText{color:#fff;text-shadow: 1px 1px 2px #000;background: none;letter-spacing: 0.1rem;line-height: 1.8;padding: 0;font-size: 1rem;}
+            #heroImage .normalText{display: none;}
+            #heroImage .textWrapper2{display: block;letter-spacing: 0.1rem;line-height: 1.8;color: var(--main-red);margin: 10px 0 20px;font-weight: bolder;}
+            
+            #heroImage .whiteBgText{display: none;}
             #heroImage .reservation{right: auto;left: 50%;bottom: 0;transform: translate(-50%,50%);width: 80px;height: 80px;}
             #heroImage .reservation span{transform:translate(-80%,-50%)}
+            #lifeFunction img{width: 100%;height: auto;}
         }
         @media (max-width:500px){
         /*header RWD設定  ============================================================*/
@@ -221,7 +230,7 @@
         /*0919 contact setting-------------------------------------------------*/
             .mainTitle{font-size: 1.25rem;line-height: 1.8;}
             
-            #contact .content p{font-size: 1.25rem;}
+            #contact .content p{font-size: 1.2rem;}
             #contact .headInfo{display: block;text-align: center;}
             #contact .headInfo + span{display: block;margin: 0;text-align: center;}
             #contact li{margin-bottom: 15px;}
@@ -247,6 +256,7 @@
         </header>
         <section class="container" id="heroImage">
             <div>
+                <div class="textWrapper2">「東利八方」位居龍首<br>品質可鑑至安心!</div>
                 <div class="topImage"></div>
                 <div class="textWrapper fontSetting">
                     <div class="textGroup">
