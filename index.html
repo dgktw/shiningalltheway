@@ -8,24 +8,20 @@
     <meta name="keywords" content="東利八方，東利八方賞屋資訊">
     <title>東利八方_八橋龍首地位，坐擁台北橋．新北門戶第一站！</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
-    
-    
-<!--
-    <link rel="stylesheet" href="bxslider-4-4.2.12/src/css/jquery.bxslider.css">
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
--->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+<!--    <script src="garand-sticky-73b0fbe/jquery.sticky.js"></script>-->
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script>
     $(function(){
+//        $('header').sticky({topSpacing:0});
         $('.slider').bxSlider({
             auto: true
             ,slideWidth: 880
             ,speed:1000 //轉場時間
             ,pause:2800 //每張持續的時間
         });
+        
     })
     </script>
     <style>
@@ -45,7 +41,7 @@
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 2px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
         /*header設定  ==================================================================*/
-        header{border-bottom: 1px solid rgba(68, 68, 68, 0.35);}
+        header{background-color: #fff;}
         nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
         nav>div{float: left;padding-left: 15px;}    
         nav>div>a{display: block;width: 120px;height: 50px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
@@ -104,11 +100,16 @@
         /*contact設定      ============================================================*/
         #contact .row{margin-bottom: 50px;}
         #contact .content{text-align: left;}
-        #contact .content>a{background: url(image/Dongli_img/logo.png) center;display: block;width: 20%;height: 100px;background-size: cover;margin-bottom: 30px;}
-        #contact .content p{font-size: 2rem;margin-bottom: 50px;letter-spacing: 0.2rem;}
+        #contact .content>a{background: url(image/Dongli_img/logo.png) center;display: block;width: 235px;height: 100px;background-size: cover;margin-bottom: 30px;}
+        #contact .content p{font-size: 1.8rem;margin-bottom: 50px;letter-spacing: 0.2rem;line-height: 1.8;}
+        #contact .content p span{position: relative;}
+        #contact .content p span::after{content: ''; position: absolute;width: 100%;height: 2px;background-color: var(--main-black);bottom: 0;left: 0;}
         #contact .row{display: flex;}
         #contact .info,#contact form{width: 50%;}
+        #contact form{padding-left: 15px;}
+        #contact .info{padding-right: 15px;}
         #contact li{padding:10px 0;}
+        #contact li>div{display: inline-block;margin-left: 25px;white-space: normal}
         #contact .headInfo{color:var(--main-red); }
         #contact li:nth-of-type(1) .headInfo + span{margin-left: 60px;}
         #contact .headInfo + span{margin-left: 25px;}
@@ -118,18 +119,42 @@
         #contact #submit{padding: 15px 0;border: none;background-color:var(--main-black);color: #fff;margin:25px 0 0 20px;letter-spacing: 0.3rem;}
         #contact iframe{width: 100%;}
         /*header RWD設定  ============================================================*/
-        footer{text-align: center;margin-bottom: 30px;}
-        /*header RWD設定  ============================================================*/
+        footer{text-align: center;margin-bottom: 30px;position: relative;}
+        
+        @media (max-width:1024px){
+            .container{padding: 0 30px;}
+            .fontSetting {font-size: 0.875rem;letter-spacing: 0.1rem;}
+            #heroImage .topImage{height: 500px;}
+            #feature figcaption{height: 110%;bottom:-75%;padding: 20px 25px;}
+        }
+        @media (max-width:1023px){
+            #contact .info{width: 55%;}
+            #contact form{width: 45%;}
+            #timing .content{margin-right: 0;width: 170px;}
+            #timing .symbol{margin-left: 0;}
+            #timing .firstLetter{font-size: 48px;margin-right: 15px;}
+        }
         @media (max-width:768px){
+        /*header RWD設定  ============================================================*/
             nav{text-align: center;margin:25px 0 0;}
             nav>div,nav ul{float: none;}
             nav ul{display: inline-block;margin-top: 10px;}
             nav>div>a{margin:0 auto;}
         }
+        @media (max-width:767px){
+            #timing .row{flex-wrap: wrap;}
+            #timing .item{width: 50%;}
+            #feature figure{float: none;width: 100%;}
+        }
+
         @media (max-width:500px){
+        /*header RWD設定  ============================================================*/
             nav ul{margin: 0;}
             nav ul li{padding:10px 6px 15px;}
             nav ul li a{font-size: 0.76rem;}
+        /*其他區域RWD設定  ============================================================*/
+            .container{padding: 0 20px;}
+            #heroImage .topImage{height: 350px;}
         }
     </style>
 </head>
@@ -175,7 +200,7 @@
                 <div class="item">
                     <div class="content">
                         <div class="distance">
-                            <div class="noWrap">
+                            <div class="noWrap fontSetting">
                                 <span class="firstLetter">50</span>公尺
                             </div>
                         </div>
@@ -186,7 +211,7 @@
                 <div class="item">
                     <div class="content">
                         <div class="distance">
-                            <div class="noWrap">
+                            <div class="noWrap fontSetting">
                                 <span class="firstLetter">200</span>公尺</div>
                             </div>
                         <div class="place fontSetting">開車抵達台北橋</div>
@@ -196,7 +221,7 @@
                 <div class="item">
                     <div class="content">
                         <div class="distance">
-                            <div class="noWrap">
+                            <div class="noWrap fontSetting">
                                 <span class="firstLetter">250</span>公尺
                             </div>
                         </div>
@@ -207,7 +232,7 @@
                 <div class="item">
                     <div class="content">
                         <div class="distance">
-                            <div class="noWrap">
+                            <div class="noWrap fontSetting">
                                 <span class="firstLetter">700</span>公尺
                             </div>
                         </div>
@@ -224,14 +249,14 @@
                    <img src="image/Dongli_img/mrt.jpg" alt="">
                     <figcaption>
                         <h3>交通樞紐</h3>
-                        <p class="fontSetting">全民保健時代來臨，國家級醫學中心：台北市立萬芳醫院，權威醫療，安心加倍。運動中心、泳池、球場、健身房、舞蹈教室、羽球場…天天運動，保持年輕</p>
+                        <p class="fontSetting">全民保健時代來臨，國家級醫學中心：台北市立萬芳醫院，權威醫療，安心加倍。運動中心、泳池、球場、健身房、舞蹈教室、羽球場…天天運動，保持年輕。</p>
                     </figcaption>
                 </figure>
                 <figure>
                    <img src="image/Dongli_img/nightMarket1.jpg" alt="">
                     <figcaption>
                         <h3>繁華日常</h3>
-                        <p class="fontSetting">「双捷晶華」大隱繁華，下樓就到興南夜市全聯、燦坤、屈臣氏等，從早到晚都多采多姿咫尺同享，享受簡單快速的庶民幸福</p>
+                        <p class="fontSetting">「双捷晶華」大隱繁華，下樓就到興南夜市全聯、燦坤、屈臣氏等，從早到晚都多采多姿咫尺同享，享受簡單快速的庶民幸福。</p>
                     </figcaption>
                 </figure>
                 
@@ -242,14 +267,14 @@
                    <img src="image/Dongli_img/dachiPark.jpg" alt="">
                     <figcaption>
                         <h3>親山遊憩</h3>
-                        <p class="fontSetting">大自然是它們的家，從庇護山林的大冠鷲、稀有保育類的台北樹蛙、到華麗羽翼的台灣藍鵲，台北市的半隱秘境：明星生態區，稀有原生物種的棲息地</p>
+                        <p class="fontSetting">大自然是它們的家，從庇護山林的大冠鷲、稀有保育類的台北樹蛙、到華麗羽翼的台灣藍鵲，台北市的半隱秘境：明星生態區，稀有原生物種的棲息地。</p>
                     </figcaption>
                 </figure>
                 <figure>
                    <img src="image/Dongli_img/threeElementary.jpg" alt="">
                     <figcaption>
                         <h3>菁英搖籃</h3>
-                        <p class="fontSetting">靜心、再興中小學、木柵國小、政大附中 、萬芳高中、政治大學、台灣戲曲學院，從小學到大學，從知識到藝術，這裡堪稱台北市最完善的黃金教育軸帶</p>
+                        <p class="fontSetting">靜心、再興中小學、木柵國小、政大附中 、萬芳高中、政治大學、台灣戲曲學院，從小學到大學，從知識到藝術，這裡堪稱台北市最完善的黃金教育軸帶。</p>
                     </figcaption>
                 </figure>
             </div>
@@ -266,16 +291,16 @@
             </div>
         </section>
         <section class="container" id="panoramic">
-            <div>iframe</div>
+<!--            <div>iframe</div>-->
         </section>
         <section class="container" id="contact">
             <h2 class="mainTitle">立即預約賞屋</h2>
             <div class="content">
                 <a href="javascript:;"></a>
-                <p>歡迎與我們立即聯絡<br>我們隨時為您提供最佳服務</p>
+                <p><span>歡迎與我們立即聯絡</span><br><span>我們隨時為您提供最佳服務</span></p>
                 <div class="row">
                     <div class="info">
-                        <ul>
+                        <ul class="fontSetting">
                             <li>
                                 <span class="headInfo fontSetting">電話</span>
                                 <span>(02)2975-8666</span>
@@ -285,7 +310,7 @@
                                 <span>新北市三重區福德北路26號</span>
                             </li>
                             <li>
-                                <span class="headInfo fontSetting">基地位置</span>
+                                <span class="headInfo">基地位置</span>
                                 <span>三重區中央北路37號、27巷16、18號</span>
                             </li>
                         </ul>
