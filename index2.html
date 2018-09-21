@@ -24,7 +24,7 @@
         
         $('nav ul li').on('click',function(){
             var snippet = $(this).children('a').attr('href');
-            var targetTop = $(snippet).offset().top;
+            var targetTop = $(snippet).offset().top - 100;
             $('body,html').animate({'scrollTop':targetTop},1000);
         });
         $('#heroImage .reservation').on('click',function(){
