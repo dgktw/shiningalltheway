@@ -32,18 +32,7 @@
             var targetTop = $(snippet).offset().top;
             $('body,html').animate({'scrollTop':targetTop},1000);
         });
-        function changeText(){
-            if($(window).innerWidth() < 500){
-//               $('#slider .mainTitle').html('滿城繁華半城靜<br>一座莊園墅萬坪');
-//               $('#feature .mainTitle').html('都市裡的大自然依山傍溪<br>101在身邊');
-//               $('#timing .mainTitle').html('南勢角、景平<br>雙捷運暢行雙北');
-            }
-            
-        }
-        changeText();
-        $(window).resize(function(){
-            changeText();
-        });
+        
         $('nav ul li a').on('click',function(){
             $('nav ul li a').removeClass('active');
             $(this).addClass('active');
