@@ -29,7 +29,7 @@
         });
         $('#heroImage .reservation').on('click',function(){
             var snippet = $(this).attr('href');
-            var targetTop = $(snippet).offset().top;
+            var targetTop = $(snippet).offset().top - 120;
             $('body,html').animate({'scrollTop':targetTop},1000);
         });
         
