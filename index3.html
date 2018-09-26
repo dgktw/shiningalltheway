@@ -44,7 +44,7 @@
         :root{
             --main-black:#333;
             --main-red:#b50029;
-            --main-subred:#c4002c;
+            --main-sub:#fff95e;
         }
         *{padding: 0;margin: 0;font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體', sans-serif;outline: none;color: var(--main-black);}
         body,html{background-color: #fff;}
@@ -56,24 +56,31 @@
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 1.5px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
         /*header設定  ==================================================================*/
-        header{background-color: #fff;position: relative;z-index: 10000;padding-bottom: 3px;border-bottom: 1px solid #ccc;}
-        nav{max-width: 1200px;margin: 15px auto;overflow: hidden;}
-        nav>div{float: left;padding-left: 15px;}    
-        nav>div>a{display: block;width: 140px;height: 70px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
-        nav ul{overflow: hidden;float: right;letter-spacing: .12rem;}
-        nav ul li{float: left;padding: 15px;}
-        nav ul li a{transition: 0.2s;font-weight: bold;}
-        nav ul li:hover a{color: var(--main-subred);}
-        nav ul li a.active{color: var(--main-subred);}
+        header{background-color: #fff;position: relative;z-index: 10000;}
+        nav{max-width: 1200px;margin: 10px auto ;overflow: hidden;position: relative;}
+        nav>.logoWrapper{float: left;padding-left: 15px;position: absolute;top: 50%;transform: translateY(-50%);}    
+        nav>.logoWrapper>a{display: block;width: 140px;height: 70px;background: url(image/Dongli_img/logo.png) no-repeat center bottom; background-size: cover;}
+        nav .itemWrapper{overflow: hidden;float: right;letter-spacing: .12rem;}
+        nav ol{overflow: hidden;padding-right: 15px;}
+        nav ol li{float: left;padding:0 15px 0px;font-size: 12px;}
+        nav ol li a{display: block;width: 25px;height: 25px;margin: 0 auto 10px;}
+        nav ol li:nth-of-type(1) a{background-image: url(image/Dongli_img/facebook.svg);}
+        nav ol li:nth-of-type(2) a{background-image: url(image/Dongli_img/pin.svg);}
+        nav ol li:nth-of-type(3) a{background-image: url(image/Dongli_img/phone.svg);}
+        header ul{background-color: var(--main-red);text-align: center;display: flex;justify-content: center;}
+        header ul li{padding:15px;}
+        header ul li a{transition: 0.2s;font-weight: bold;color: #fff;}
+        header ul li:hover a{color: var(--main-sub);}
+        header ul li a.active{color: var(--main-sub);}
         
         /*heroImage  ================================================================*/
         #heroImage .normalText{color:var(--main-black);display: inline-block;margin-bottom: 6px;}
         #heroImage .textGroup:nth-of-type(3) .normalText{margin-bottom: 12px;}
-        #heroImage .whiteBgText{color:#fff;background-color:var(--main-red);padding: 7px 15px;margin-bottom: 10px;display: inline-block;letter-spacing: .3rem;}
+        #heroImage .whiteBgText{color:var(--main-red);background-color:#fff;padding: 7px 15px;margin-bottom: 10px;display: inline-block;letter-spacing: .3rem;}
         #heroImage>div{position: relative;}
         #heroImage .textWrapper{position: absolute;left:80px;bottom: 50px;text-align: left;}
         #heroImage .textWrapper2{display: none;}
-        #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 100px);background-size: cover;}
+        #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 150px);background-size: cover;}
         #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
         
@@ -166,10 +173,6 @@
         @media (max-width:900px){#feature figcaption{padding: 20px 30px;}}
         @media (max-width:768px){
         /*header RWD設定  ============================================================*/
-            nav{text-align: center;margin:25px 0 0;}
-            nav>div,nav ul{float: none;}
-            nav ul{display: inline-block;margin-top: 10px;}
-            nav>div>a{margin:0 auto;}
         }
         @media (max-width:767px){
             #timing .row{flex-wrap: wrap;margin: 50px 0 100px;;}
@@ -192,7 +195,7 @@
             .mainTitle::before,.mainTitle::after{display: none;}
         /*0919 heroImage        -------------------------------------------------*/
             #heroImage .textWrapper{left: 50px;}
-            
+        /*#lifeFunction setting------------------------------------------------------*/    
             #lifeFunction .row>div:nth-of-type(1){margin-bottom: 70px;}
         }
 
@@ -205,12 +208,15 @@
             #heroImage .reservation{right: auto;left: 50%;bottom: 0;transform: translate(-50%,50%);width: 80px;height: 80px;}
             #heroImage .reservation span{transform:translate(-80%,-50%)}
             #lifeFunction img{width: 100%;height: auto;}
+        /*header setting------------------------------------------------------*/    
+            nav ol li{padding: 0 0 5px 10px;font-size: 10px;}
+            nav ol li a{width: 20px;height: 20px;margin: 0 auto 7px;}
         }
         @media (max-width:500px){
         /*header RWD設定  ============================================================*/
-            nav ul{margin: 0;}
-            nav ul li{padding:10px 6px 15px;}
-            nav ul li a{font-size: 0.76rem;}
+            header ul{margin: 0;}
+            header ul li{padding:10px 6px 15px;}
+            header ul li a{font-size: 0.76rem;}
         /*其他區域RWD設定  ============================================================*/
             .container{padding: 0 20px;}
             #heroImage .topImage{height: 350px;}
@@ -228,25 +234,39 @@
             #contact .headInfo + span{display: block;margin: 0;text-align: center;}
             #contact li{margin-bottom: 15px;}
             #contact li:nth-of-type(1) .headInfo + span{margin: 0;}
+            
+        /*header setting------------------------------------------------------*/    
+            nav>.logoWrapper>a{width: 80px;height: 40px;}
         }
-        @media (max-width:360px){#contact .content p{font-size:1.15rem; }
+        @media (max-width:375px){
+            #contact .content p{font-size:1.15rem; }
+        /*header setting------------------------------------------------------*/    
+        }  
+
     </style>
 </head>
 <body>
     <div class="container-fluid outerCotainer">
         <header>
             <nav>
-                <div>
+                <div class="logoWrapper">
                     <a href="index.html" id="logo"></a>
                 </div>
-                <ul>
-                    <li><a href="#timing">生活交通</a></li>
-                    <li><a href="#feature">宅院特色</a></li>
-<!--                    <li><a href="#designTeam">建築團隊</a></li>-->
-                    <li><a href="#slider">外觀設計</a></li>
-                    <li><a href="#contact">聯絡我們</a></li>
-                </ul>
+                <div class="itemWrapper">
+                    <ol>
+                        <li><a href="javascript:;"></a>FB諮詢</li>
+                        <li><a href="javascript:;"></a>地圖導航</li>
+                        <li><a href="javascript:;"></a>(02)2975-8666</li>
+                    </ol>
+                </div>
             </nav>
+            <ul class="fontSetting">
+                        <li><a href="#timing">生活交通</a></li>
+                        <li><a href="#feature">宅院特色</a></li>
+                    <!--                    <li><a href="#designTeam">建築團隊</a></li>-->
+                        <li><a href="#slider">外觀設計</a></li>
+                        <li><a href="#contact">聯絡我們</a></li>
+                    </ul>
         </header>
         <section class="container" id="heroImage">
             <div>
