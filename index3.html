@@ -59,7 +59,11 @@
         header{background-color: #fff;position: relative;z-index: 10000;}
         nav{max-width: 1200px;margin: 10px auto ;overflow: hidden;position: relative;}
         nav>.logoWrapper{float: left;padding-left: 15px;position: absolute;top: 50%;transform: translateY(-50%);}    
-        nav>.logoWrapper>a{display: block;width: 160px;height: 75px;background: url(image/Dongli_img/logo.jpg) no-repeat center bottom; background-size: contain;}
+        nav>.logoWrapper>a{display: block;width: 160px;height: 70px;background: url(image/Dongli_img/logo.jpg) no-repeat center bottom; 
+            background-size: contain;
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
+        }
         nav .itemWrapper{overflow: hidden;float: right;letter-spacing: .12rem;}
         nav ol{overflow: hidden;padding-right: 15px;}
         nav ol li{float: left;padding:0 15px 0px;font-size: 0.75rem;}
@@ -67,7 +71,12 @@
         nav ol li:nth-of-type(1) a{background-image: url(image/Dongli_img/facebook.svg);}
         nav ol li:nth-of-type(2) a{background-image: url(image/Dongli_img/pin.svg);}
         nav ol li:nth-of-type(3) a{background-image: url(image/Dongli_img/phone.svg);}
-        header ul{background-color: var(--main-red);text-align: center;display: flex;justify-content: center;}
+        header ul{background-color: var(--main-red);text-align: center;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            -webkit-justify-content: center;
+        }
         header ul li{padding:15px;}
         header ul li a{transition: 0.2s;font-weight: bold;color: rgba(255, 255, 255, 0.65);}
         header ul li:hover a{color: var(--main-sub);}
@@ -80,7 +89,11 @@
         #heroImage>div{position: relative;}
         #heroImage .textWrapper{position: absolute;left:80px;bottom: 50px;text-align: left;}
         #heroImage .textWrapper2{display: none;}
-        #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 150px);background-size: cover;}
+        #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 150px);
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+        }
         #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
         
@@ -101,14 +114,25 @@
         #feature .row:nth-of-type(1){margin-bottom: 50px;}
         #feature figure{width: 50%;float: left;position: relative;}
         #feature figure img{width: 100%;}
-        #feature figcaption{background-color:#fff;width: 80%;margin: 0 auto;padding: 30px 50px;height: 57%;box-sizing: border-box;position: absolute;left: 50%;bottom: -30%;transform: translate(-50%,0);}
+        #feature figcaption{background-color:#fff;width: 80%;margin: 0 auto;padding: 30px 50px;height: 57%;position: absolute;left: 50%;bottom: -30%;
+            transform: translate(-50%,0);
+            -webkit-transform: translate(-50%,0);
+            -moz-transform: translate(-50%,0);
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
         #feature figcaption h3{text-align: center;margin-bottom: 20px;color:var(--main-red);letter-spacing: 0.15rem;}
         /*slider設定      ============================================================*/
 /*
         #slider{position: relative;}
         #slider::before{content: '';width: 100%; background-color: var(--main-red);max-width: 1200px;position: absolute;height: 500px;display: inline-block;top: 150px;left: 50%;transform: translateX(-50%);}
 */
-        #slider .bx-wrapper{margin: 0 auto;border:none;box-shadow: none;}
+        #slider .bx-wrapper{margin: 0 auto;border:none;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
         .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{bottom: 30px;}
         .bx-wrapper .bx-pager.bx-default-pager a{background-color: #fff;}
         .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
@@ -129,12 +153,20 @@
         /*lifeFunction設定     ==========================================================*/
         #lifeFunction .row{overflow: hidden;}
         #lifeFunction .row>div:nth-of-type(1){margin-bottom: 150px;}
-        #lifeFunction img{width: 100%;height: auto;box-sizing: border-box;}
+        #lifeFunction img{width: 100%;height: auto;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
         #lifeFunction h3{color: var(--main-red);margin-bottom: 20px;letter-spacing: 0.15rem;}
         /*contact設定      ===============================================*/
         #contact .row{margin-bottom: 50px;}
         #contact .content{text-align: left;}
-        #contact .content>a{background: url(image/Dongli_img/logo2.png) center;display: block;width: 235px;height: 100px;background-size: cover;margin-bottom: 30px;}
+        #contact .content>a{background: url(image/Dongli_img/logo2.png) center;display: block;width: 235px;height: 100px;margin-bottom: 30px;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+        }
         #contact .content p{font-size: 1.8rem;margin-bottom: 50px;letter-spacing: 0.2rem;line-height: 1.8;}
         #contact .content p span{position: relative;}
         #contact .content p span::after{content: ''; position: absolute;width: 100%;height: 1.5px;background-color: var(--main-black);bottom: 0;left: 0;}
@@ -218,6 +250,7 @@
         /*header setting------------------------------------------------------*/    
             nav ol li{padding: 0 0 0px 10px;font-size: 0.625rem;}
             nav ol li a{width: 20px;height: 20px;margin: 0 auto 7px;}
+            nav>.logoWrapper>a{width: 80px;height: 40px;}
             footer{font-size: 0.625rem;}
         }
         @media (max-width:500px){
@@ -242,15 +275,11 @@
             #contact .headInfo + span{display: block;margin: 0;text-align: center;}
             #contact li{margin-bottom: 15px;}
             #contact li:nth-of-type(1) .headInfo + span{margin: 0;}
-            
-        /*header setting------------------------------------------------------*/    
-            nav>.logoWrapper>a{width: 80px;height: 40px;}
         }
         @media (max-width:375px){
             #contact .content p{font-size:1.15rem; }
-        /*header setting------------------------------------------------------*/    
         }  
-
+        
     </style>
 </head>
 <body>
