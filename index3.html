@@ -67,10 +67,11 @@
         nav .itemWrapper{overflow: hidden;float: right;letter-spacing: .12rem;}
         nav ol{overflow: hidden;padding-right: 15px;}
         nav ol li{float: left;padding:0 15px 0px;font-size: 0.75rem;}
-        nav ol li a{display: block;width: 25px;height: 25px;margin: 0 auto 10px;}
-        nav ol li:nth-of-type(1) a{background-image: url(image/Dongli_img/facebook.svg);}
-        nav ol li:nth-of-type(2) a{background-image: url(image/Dongli_img/pin.svg);}
-        nav ol li:nth-of-type(3) a{background-image: url(image/Dongli_img/phone.svg);}
+        nav ol li a{display: block;}
+        nav ol li a div{width: 25px;height: 25px;margin: 0 auto 10px;background-repeat: no-repeat;}
+        nav ol li:nth-of-type(1) div{background-image: url(image/Dongli_img/facebook.svg);}
+        nav ol li:nth-of-type(2) div{background-image: url(image/Dongli_img/pin.svg);}
+        nav ol li:nth-of-type(3) div{background-image: url(image/Dongli_img/phone.svg);}
         header ul{background-color: var(--main-red);text-align: center;
             display: flex;
             display: -webkit-flex;
@@ -255,7 +256,7 @@
             #lifeFunction img{width: 100%;height: auto;}
         /*header setting------------------------------------------------------*/    
             nav ol li{padding: 0 0 0px 10px;font-size: 0.625rem;}
-            nav ol li a{width: 20px;height: 20px;margin: 0 auto 7px;}
+            nav ol li div{width: 20px;height: 20px;margin: 0 auto 7px;}
             nav>.logoWrapper>a{width: 80px;height: 40px;}
             footer{font-size: 0.625rem;}
         }
@@ -297,17 +298,25 @@
                 </div>
                 <div class="itemWrapper">
                     <ol>
-                        <li><a href="javascript:;"></a>FB諮詢</li>
-                        <li><a href="https://www.google.com.tw/maps/place/%E6%9D%B1%E5%88%A9%E5%85%AB%E6%96%B9-%E7%86%B1%E9%8A%B7%E5%BB%BA%E6%A1%88/@25.064761,121.4999665,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a922dece864d:0x24d7ed2773e96cc4!8m2!3d25.0647562!4d121.5021552" target="_blank"></a>地圖導航</li>
-                        <li><a href="javascript:;"></a>(02)2975-8666</li>
+                        <li>
+                            <a href="javascript:;"><div></div>FB諮詢</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tw/maps/place/%E6%9D%B1%E5%88%A9%E5%85%AB%E6%96%B9-%E7%86%B1%E9%8A%B7%E5%BB%BA%E6%A1%88/@25.064761,121.4999665,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a922dece864d:0x24d7ed2773e96cc4!8m2!3d25.0647562!4d121.5021552" target="_blank">
+                                <div></div>地圖導航
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:(02)2975-8666"><div></div>(02)2975-8666</a>
+                        </li>
                     </ol>
                 </div>
             </nav>
             <ul class="fontSetting">
                         <li><a href="#timing">生活交通</a></li>
+                        <li><a href="#slider">外觀設計</a></li>
                         <li><a href="#feature">宅院特色</a></li>
                     <!--                    <li><a href="#designTeam">建築團隊</a></li>-->
-                        <li><a href="#slider">外觀設計</a></li>
                         <li><a href="#contact">聯絡我們</a></li>
                     </ul>
         </header>
