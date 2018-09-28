@@ -22,6 +22,20 @@
             ,pause:2800 //每張持續的時間
         });
         
+        function changeTopSlider(){
+            if($(window).innerWidth()<600){
+               $('.topImage>div').html('<img src="image/Dongli_img/topImage0.jpg" alt="slider image1">')
+            }
+        }
+        changeTopSlider();
+        
+        $('.topImage').bxSlider({
+            auto: true
+            ,slideWidth: 1200
+            ,speed:1000 //轉場時間
+            ,pause:2800 //每張持續的時間
+        });
+        
         $('header ul li').on('click',function(){
             var snippet = $(this).children('a').attr('href');
             var targetTop = $(snippet).offset().top - 150;
@@ -36,6 +50,10 @@
         $('header ul li a').on('click',function(){
             $('header ul li a').removeClass('active');
             $(this).addClass('active');
+        });
+        
+        $(window).resize(function(){
+            changeTopSlider();
         });
     })
     </script>
@@ -90,11 +108,6 @@
         #heroImage>div{position: relative;}
         #heroImage .textWrapper{position: absolute;left:80px;top: 50px;text-align: left;}
         #heroImage .textWrapper2{display: none;}
-        #heroImage .topImage{background: url(image/Dongli_img/topImage1.jpg) no-repeat;width: 100%;height:calc(100vh - 150px);
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-        }
         #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
         
@@ -134,7 +147,7 @@
         #slider{position: relative;}
         #slider::before{content: '';width: 100%; background-color: var(--main-red);max-width: 1200px;position: absolute;height: 500px;display: inline-block;top: 150px;left: 50%;transform: translateX(-50%);}
 */
-        #slider .bx-wrapper{margin: 0 auto;border:none;
+        .bx-wrapper{margin: 0 auto;border:none;
             box-shadow: none;
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
@@ -145,13 +158,14 @@
             background-color: var(--main-red);
         }
         .bx-wrapper .bx-controls-direction a{display: none;}
+        /*箭頭設定   =====================================================*/
 /*
-        .bx-wrapper .bx-controls-direction a{top: auto;margin-top:0;bottom: 0;}
-        .bx-wrapper .bx-next{background-image: url(image/Dongli_img/right-arrow.svg);right: 0;}
-        .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/left-arrow.svg);left: 0;}
+        #heroImage .bx-wrapper .bx-controls-direction a{top: auto;margin-top:0;bottom: 0;}
+        #heroImage .bx-wrapper .bx-next{background-image: url(image/Dongli_img/right-arrow.svg);right: 0;}
+        #heroImage .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/left-arrow.svg);left: 0;}
 
-       .bx-wrapper .bx-prev,.bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
-        .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-prev:focus,.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus{background-position: center;}
+       #heroImage .bx-wrapper .bx-prev,#heroImage .bx-wrapper .bx-next{padding: 20px;background-color: #fff;background-size: 30%;background-position: center;}
+        #heroImage .bx-wrapper .bx-prev:hover,#heroImage .bx-wrapper .bx-prev:focus,#heroImage .bx-wrapper .bx-next:hover,#heroImage .bx-wrapper .bx-next:focus{background-position: center;}
 */
         
         /*add設定     ===================================================================*/
@@ -324,13 +338,19 @@
         </header>
         <section class="container" id="heroImage">
             <div>
+                <!--
                 <div class="textWrapper2">
                     <div class="blackText">新北門戶第一站<br>比鄰晴光商圈、台北橋</div>
                     <div class="redText">25-45坪 雄踞三和生活圈</div>
-<!--                    <div class="redText">02-2975-8666</div>-->
+                    <div class="redText">02-2975-8666</div>
                 </div>
-                <div class="topImage"></div>
-                <div class="textWrapper fontSetting">
+-->
+                <div class="topImage">
+                    <div><img src="image/Dongli_img/topImage1.jpg" alt="slider image1"></div>
+                    <div><img src="image/Dongli_img/topImage1.jpg" alt="slider image1"></div>
+                    <div><img src="image/Dongli_img/topImage1.jpg" alt="slider image1"></div>
+                </div>
+                <!--<div class="textWrapper fontSetting">
                     <div class="textGroup">
                        <span class="normalText">新北門戶第一站</span>
                     </div>
@@ -344,7 +364,7 @@
                     <div class="textGroup">
                         <span class="whiteBgText">02-2975-8666</span>
                     </div>
-                </div>
+                </div>-->
                 <a href="#contact" class="reservation"><span>立即<br>預約</span></a>
             </div>
         </section>
