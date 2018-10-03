@@ -27,7 +27,21 @@
                $('.topImage > div.first').html('<img src="image/Dongli_img/topword2.jpg" alt="slider image1">')
             }
         }
+
+        function changeReservationCSS() {
+            var padding_left = 50;
+            var padding_right = 50;
+            var slider_max_width = 1000;
+            var judge_length = padding_left + padding_right + slider_max_width;
+            var width = $(window).innerWidth()
+            if (width > judge_length) {
+                var right_px = (width - judge_length) / 2;
+                $("a.reservation").css('right', right_px + 'px');
+            }
+        }
+
         // changeTopSlider();
+        changeReservationCSS();
 
         $('.topImage').bxSlider({
             auto: true
@@ -54,6 +68,7 @@
 
         $(window).resize(function(){
             // changeTopSlider();
+            changeReservationCSS();
         });
     })
     </script>
