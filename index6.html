@@ -92,11 +92,16 @@
         header{background-color: #fff;position: relative;z-index: 10000;}
         nav{max-width: 1200px;margin: 10px auto ;overflow: hidden;position: relative;}
         nav>.logoWrapper{float: left;padding-left: 15px;position: absolute;top: 50%;transform: translateY(-50%);}
+
+        /*
         nav>.logoWrapper>a{display: block;width: 160px;height: 70px;background: url(image/Dongli_img/logo.jpg) no-repeat center bottom;
             background-size: contain;
             -webkit-background-size: contain;
             -moz-background-size: contain;
         }
+         */
+        nav > .logoWrapper img {width: 160px; margin-bottom: -5px;}
+
         nav .itemWrapper{overflow: hidden;float: right;letter-spacing: .12rem;}
         nav ol{overflow: hidden;padding-right: 15px;}
         nav ol li{float: left;padding:0 15px 0px;font-size: 0.75rem;}
@@ -335,7 +340,9 @@
         <header>
             <nav>
                 <div class="logoWrapper">
-                    <a href="index.html" id="logo"></a>
+                    <a href="index.html" id="logo">
+                        <img src="image/Dongli_img/logo.jpg">
+                    </a>
                 </div>
                 <div class="itemWrapper">
                     <ol>
