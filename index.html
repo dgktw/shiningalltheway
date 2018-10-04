@@ -581,9 +581,9 @@
                         </ul>
                     </div>
                     <form class="fontSetting" action="" method="get" name="contactForm" id="contactForm">
-                        <label><span>您的姓名</span><input type="text"></label>
-                        <label><span>您的電話</span><input type="text"></label>
-                        <label><span>您的信箱</span><input type="text"></label>
+                        <label><span>您的姓名</span><input type="text" name="entry.1605432684" required></label>
+                        <label><span>您的電話</span><input type="tel" name="entry.259522342" required></label>
+                        <label><span>您的信箱</span><input type="email" name="emailAddress" required></label>
                         <label class="buttonCon">
                             <span class="hide">您的按鈕</span>
                             <input class="fontSetting" type="submit" value="確認預約" name="submit" id="submit">
@@ -606,8 +606,23 @@
             e.preventDefault();
             var url = 'https://www.shiningalltheway.com.tw?from=submit';
             gtag_report_conversion(url);
-            alert('感謝您留下寶貴資料，我們會盡快與您聯繫');
-            location.reload();
+            $.ajax({
+                url: 'https://docs.google.com/forms/d/e/1FAIpQLScsE2aI4NVMDMVK4Gz5riqNkgcn_y7XB0R09RrcIWMSHaCA6g/formResponse',
+                type: 'post',
+                data: $('#contactForm').serialize(),
+                success: function(res) {
+                    gRes = res;
+                    gThis = this;
+                    alert('感謝您留下寶貴資料，我們會盡快與您聯繫');
+                    location.reload();
+                },
+                error: function(res2) {
+                    gRes = res2;
+                    gThis = this;
+                    alert('感謝您留下寶貴資料，我們會盡快與您聯繫');
+                    location.reload();
+                }
+            });
         })
         //-->
     </script>
