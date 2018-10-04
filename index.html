@@ -604,6 +604,8 @@
 
         $('#contactForm').submit(function(e) {
             e.preventDefault();
+            var url = 'https://www.shiningalltheway.com.tw?from=submit';
+            gtag_report_conversion(url);
             alert('感謝您留下寶貴資料，我們會盡快與您聯繫');
             location.reload();
         })
