@@ -93,14 +93,10 @@
         nav{max-width: 1200px;margin: 10px auto ;overflow: hidden;position: relative;}
         nav>.logoWrapper{float: left;padding-left: 15px;position: absolute;top: 50%;transform: translateY(-50%);}
 
-        nav > .logoWrapper img {width: 160px; margin-bottom: -5px;}
-        .sell-slogan {
-            display: inline-block;
-            margin-left: 30px;
-            vertical-align: top;
-            padding-top: 10px;
-            color: var(--main-red);
-            font-weight: bold;
+        nav>.logoWrapper>a{display: block;width: 160px;height: 70px;background: url(image/Dongli_img/logo.jpg) no-repeat center bottom;
+            background-size: contain;
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
         }
 
         nav .itemWrapper{overflow: hidden;float: right;letter-spacing: .12rem;}
@@ -349,13 +345,7 @@
         <header>
             <nav>
                 <div class="logoWrapper">
-                    <a href="index.html" id="logo">
-                        <img src="image/Dongli_img/logo.jpg">
-                    </a>
-                    <div class="sell-slogan">
-                        新北門戶第一站 台北橋站三分鐘到家<br />
-                        25~45坪 月薪成家
-                    </div>
+                    <a href="index.html" id="logo"></a>
                 </div>
 
                 <div class="itemWrapper">
