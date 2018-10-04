@@ -133,7 +133,7 @@
         #heroImage>div{position: relative;}
         #heroImage .textWrapper{position: absolute;left:80px;top: 50px;text-align: left;}
         #heroImage .textWrapper2{display: none;}
-        #heroImage .reservation{background-color: var(--main-red);display: block; width: 100px;height: 100px;position: relative;position: absolute;right: 0;bottom: 0;}
+        #heroImage .reservation{background-color: var(--main-red);display: inline-block; width: 100px;height: 100px;position: relative;}
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
 
         /* timing extra */
@@ -292,7 +292,7 @@
             #heroImage .textWrapper2 .blackText{font-size: 0.875rem;margin-bottom: 10px;line-height: 1.8;}
             #heroImage .textWrapper2 .redText{font-weight: bolder;color: var(--main-red);font-size: 21px;}
             #heroImage .whiteBgText{display: none;}
-            #heroImage .reservation{right: auto;left: 50%;bottom: 0;transform: translate(-50%,50%);width: 80px;height: 80px;}
+            #heroImage .reservation{bottom: 0;width: 80px;height: 80px;}
             #heroImage .reservation span{transform:translate(-80%,-50%)}
         /*lifeFunction setting - ---------------------------------------------*/
             #lifeFunction img{width: 100%;height: auto;}
@@ -301,16 +301,6 @@
             nav ol li div{width: 20px;height: 20px;margin: 0 auto 7px;}
             nav>.logoWrapper>a{width: 80px;height: 40px;}
             footer{font-size: 0.625rem;}
-        /*箭頭設定   =====================================================*/
-        #heroImage .bx-wrapper .bx-controls-direction a{display: block;}
-        #heroImage .bx-wrapper .bx-controls-direction a{top: auto;margin-top:0;bottom: 0;}
-        #heroImage .bx-wrapper .bx-next{background-image: url(image/Dongli_img/right-arrow.svg);right: 0;}
-        #heroImage .bx-wrapper .bx-prev{background-image: url(image/Dongli_img/left-arrow.svg);left: 0;}
-
-        #heroImage .bx-wrapper .bx-prev,#heroImage .bx-wrapper .bx-next{padding: 10px;background-color: #fff;background-size: 30%;background-position: center;}
-        #heroImage .bx-wrapper .bx-prev:hover,#heroImage .bx-wrapper .bx-prev:focus,#heroImage .bx-wrapper .bx-next:hover,#heroImage .bx-wrapper .bx-next:focus{background-position: center;}
-        }
-        @media (max-width:500px){
         /*header RWD設定  ============================================================*/
             header ul{margin: 0;}
             header ul li{padding:8px 6px;}
