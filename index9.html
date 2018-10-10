@@ -220,6 +220,14 @@
         section#heroImage {padding: 0;}
         .bx-wrapper img {width: 100%;}
 
+        /* gallery */
+        #gallery img {
+            max-width: 250px;
+        }
+        #gallery div {
+            margin-bottom: 100px;
+        }
+
         /*add設定     ===================================================================*/
         #add img{width: 100%;}
         /*lifeFunction設定     ==========================================================*/
@@ -279,12 +287,19 @@
             /*#feature figure{height: 400px;}*/
             #feature figcaption{z-index: 5;}
 
+            #gallery img {
+                max-width: 350px;
+            }
         }
         @media (max-width:768px){
         /*header RWD設定  ============================================================*/
             #lifeFunction img{width: 100%;}
             #feature figure img{width: 100%;}
             .sell-slogan {display: none;}
+
+            #gallery img {
+                max-width: 250px;
+            }
         }
         @media (max-width:767px){
             #timing .row{flex-wrap: wrap;margin: 50px 0 100px;;}
@@ -350,6 +365,10 @@
             #contact .headInfo + span{display: block;margin: 0;text-align: center;}
             #contact li{margin-bottom: 15px;}
             #contact li:nth-of-type(1) .headInfo + span{margin: 0;}
+
+            #gallery img {
+                max-width: 350px;
+            }
         }
         @media (max-width:375px){
             #heroImage .bx-wrapper .bx-prev,#heroImage .bx-wrapper .bx-next{padding:0; }
@@ -528,6 +547,39 @@
                 <div><img src="image/slides/bottom_slide_03.jpg" alt="slider image3"></div>
                 <div><img src="image/slides/bottom_slide_04.jpg" alt="slider image4"></div>
                 <div><img src="image/slides/bottom_slide_05.jpg" alt="slider image5"></div>
+            </div>
+        </section>
+
+        <section class="container" id="gallery">
+            <h2 class="mainTitle">實品屋圖輯</h2>
+            <div class="row">
+                <a href="image/r1.jpg" data-lightbox="real"><img src="image/r1.jpg" alt=""></a>
+                <a href="image/r2.jpg" data-lightbox="real"><img src="image/r2.jpg" alt=""></a>
+                <a href="image/r3.jpg" data-lightbox="real"><img src="image/r3.jpg" alt=""></a>
+                <a href="image/slides/bs_new_4_.jpg" data-lightbox="real"><img src="image/slides/bs_new_4_.jpg" alt=""></a>
+                <!--<a href="image/r1.jpg" data-lightbox="real"><img src="image/r1.jpg" alt=""></a>-->
+                <!--<a href="image/r1.jpg" data-lightbox="real"><img src="image/r1.jpg" alt=""></a>-->
+                <a href="image/r7.jpg" data-lightbox="real"><img src="image/r7.jpg" alt=""></a>
+                <a href="image/r8.jpg" data-lightbox="real"><img src="image/r8.jpg" alt=""></a>
+            </div>
+
+            <h2 class="mainTitle">公設示意圖輯</h2>
+            <div class="row">
+                <a href="image/slides/bs_cover_.jpg" data-lightbox="public"><img src="image/slides/bs_cover_.jpg" alt=""></a>
+                <a href="image/Dongli_img/yoga1.jpg" data-lightbox="public"><img src="image/Dongli_img/yoga1.jpg" alt=""></a>
+                <a href="image/Dongli_img/gym1.jpg" data-lightbox="public"><img src="image/Dongli_img/gym1.jpg" alt=""></a>
+                <a href="image/Dongli_img/library1.jpg" data-lightbox="public"><img src="image/Dongli_img/library1.jpg" alt=""></a>
+            </div>
+
+            <h2 class="mainTitle">生活機能圖輯</h2>
+            <div class="row">
+                <a href="image/slides/metro.jpg" data-lightbox="real"><img src="image/slides/metro.jpg" alt=""></a>
+                <a href="image/slides/bottom_slide_05.jpg" data-lightbox="real"><img src="image/slides/bottom_slide_05.jpg" alt=""></a>
+                <a href="image/slides/bottom_slide_07_b.jpg" data-lightbox="real"><img src="image/slides/bottom_slide_07_b.jpg" alt=""></a>
+                <a href="image/slides/bottom_slide_02.jpg" data-lightbox="real"><img src="image/slides/bottom_slide_02.jpg" alt=""></a>
+                <!--<a href="__" data-lightbox="real"><img src="__" alt=""></a>-->
+                <a href="image/Dongli_img/riverBank.jpg" data-lightbox="real"><img src="image/Dongli_img/riverBank.jpg" alt=""></a>
+                <a href="image/Dongli_img/riverBank2.jpg" data-lightbox="real"><img src="image/Dongli_img/riverBank2.jpg" alt=""></a>
             </div>
         </section>
 
