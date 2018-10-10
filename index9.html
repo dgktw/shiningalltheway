@@ -88,6 +88,13 @@
         .mainTitle{ margin-bottom: 30px;position: relative;display: inline-block;letter-spacing: .2rem;}
         .mainTitle::before,.mainTitle::after{content: '';display: inline-block; width:50px;height: 1.5px;background-color: var(--main-black);position: absolute;top: 50%;}
         .mainTitle::before{left: -70px;}.mainTitle::after{right: -70px;}
+
+        .mainTitle-red{ position: relative;display: inline-block;letter-spacing: .2rem; text-shadow: 2px 2px 2px #aaa; font-size: 40px; color: var(--main-red);}
+        /*
+        .mainTitle-red::before, .mainTitle-red::after {content: '';display: inline-block; width:50px;height: 1.5px;background-color: var(--main-red);position: absolute;top: 50%;}
+        .mainTitle-red::before{left: -70px;}
+        .mainTitle-red::after{right: -70px;}
+        */
         /*header設定  ==================================================================*/
         header{background-color: #fff;position: relative;z-index: 10000;}
         nav{max-width: 1200px;margin: 10px auto ;overflow: hidden;position: relative;}
@@ -155,7 +162,7 @@
 
         /*timing   ================================================================*/
         #timing{max-width: 1200px;margin-left: auto;margin-right: auto;}
-        #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 0 0 150px;}
+        #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 0 0 50px;}
         #timing .item{display: flex;align-items: center;justify-content:center;}
         #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red);}
         #timing .content{margin-right:20px;width: 180px;}
@@ -434,7 +441,7 @@
         </section>
 
         <section class="container" id="timing-extra">
-            <h2 class="mainTitle">雙捷運宅 = 雙贏</h2>
+            <h2 class="mainTitle">捷運生活大苑，新北門戶第一站<br />三和商圈 繁華取靜，中央大道轉身“一巷靜”</h2>
             <div class="row">
                 <figure>
                    <img src="image/slides/bottom_slide_07_b.jpg" alt="">
@@ -494,6 +501,8 @@
                     <div class="symbol"></div>
                 </div>
             </div>
+
+            <h1 class="mainTitle-red">雙捷運站 = 雙贏！！</h1>
         </section>
 
         <section class="container" id="slider">
