@@ -106,7 +106,18 @@
         nav ol li a div{width: 25px;height: 25px;margin: 0 auto 10px;background-repeat: no-repeat;}
         nav ol li:nth-of-type(1) div{background-image: url(image/Dongli_img/facebook.svg);}
         nav ol li:nth-of-type(2) div{background-image: url(image/Dongli_img/pin.svg);}
-        nav ol li:nth-of-type(3) div{background-image: url(image/Dongli_img/phone.svg);}
+        /*nav ol li:nth-of-type(3) div{background-image: url(image/Dongli_img/phone.svg);}*/
+        img.phone-icon {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+        }
+        span.phone-text {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
         header ul{background-color: var(--main-red);text-align: center;
             display: flex;
             display: -webkit-flex;
@@ -387,7 +398,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="tel:(02)2975-8666"><div></div>(02)2975-8666</a>
+                            <a href="tel:(02)2975-8666">
+                                <img class="phone-icon" src="image/speech-bubble.svg" width="28" />
+                                <p>(02) <span class="phone-text">29758666</span></p>
+                            </a>
                         </li>
                     </ol>
                 </div>
