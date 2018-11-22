@@ -792,5 +792,47 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(el, s);
         })();
     </script>
+
+    <script src="//cdn.doublemax.net/js/rtid.js"></script>
+    <script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker.js"></script>
+    <script async src='https://cdn.doublemax.net/dmp/cft/tracker.js'></script>
+    <script>
+        clickforce_rtid("8709001");
+        ElandTracker.Track({
+            'source': 'CAP8709',
+            'trackType': 'view',
+            'trackSubfolderDepth': 3,
+            'targetType': 'usual'
+        });
+        clickforce_rtid("8709002");
+        ElandTracker.Track({
+            'source': 'CAP8709',
+            'trackType': 'view',
+            'trackSubfolderDepth': 3,
+            'targetType': 'pageview'
+        });
+        window.cft = window.cft || function () { (cft.q = cft.q || []).push([].slice.call(arguments)) };
+        cft('setSiteId', 'CF-181100012512');
+        cft('setEnableCookie');
+        cft('setViewPercentage');
+        cft('setTPCookie');
+    </script>
+
+    <script>
+        function Confirmreservation() {
+            clickforce_rtid("8709003");
+            ElandTracker.Track({
+                'source': 'CAP8709',
+                'trackType': 'click',
+                'trackSubfolderDepth': 3,
+                'targetType': 'Confirmreservation'
+            });
+            cft('send', 'event', {
+                action: 'Confirmreservation',    // 事件動作
+                category: '',    // 事件類別
+                label: '',    // 事件標籤
+            });
+        }
+    </script>
 </body>
 </html>
