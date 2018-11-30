@@ -154,15 +154,16 @@
         #heroImage .textWrapper{position: absolute;left:80px;top: 50px;text-align: left;}
         #heroImage .textWrapper2{display: none;}
         #heroImage .reservation{
-            background-color: var(--main-red);
+            /*background-color: var(--main-red);*/
             display: inline-block;
-            width: 100px;
-            height: 100px;
+            /*width: 100px;*/
+            /*height: 100px;*/
             position: fixed;
             /*margin-top: 42px;*/
             left: 0;
             bottom: 0;
-            opacity: 0.92;
+            /*opacity: 0.92;*/
+            z-index: 999;
         }
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
 
@@ -393,8 +394,9 @@
             #heroImage .textWrapper2 .blackText{font-size: 0.875rem;margin-bottom: 10px;line-height: 1.8;}
             #heroImage .textWrapper2 .redText{font-weight: bolder;color: var(--main-red);font-size: 21px;}
             #heroImage .whiteBgText{display: none;}
-            #heroImage .reservation{bottom: 0;width: 80px;height: 80px;}
+            #heroImage .reservation{bottom: 0;width: 120px;height: 120px;}
             #heroImage .reservation span{transform:translate(-80%,-50%)}
+            #heroImage .reservation img{width: 120px;height: 120px;}
         /*lifeFunction setting - ---------------------------------------------*/
             #lifeFunction img{width: 100%;height: auto;}
         /*header setting------------------------------------------------------*/
@@ -527,7 +529,7 @@
                     <div><img src="image/slides/topImage_text_2_1_2.jpg" alt="slider image3"></div>
                     <div><img src="image/slides/nightview2_2_1.jpg" alt="slider image4"></div>
                 </div>
-                <a href="#contact" class="reservation"><span>立即<br>預約</span></a>
+                <a href="#contact" class="reservation"><img src="image/order_200.png"></a>
             </div>
         </section>
 
