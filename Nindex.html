@@ -166,6 +166,8 @@
             z-index: 999;
         }
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
+        section#heroImage div.player-container-1 { height: 720px; }
+        section div.player-container-2 { height: 480px; }
 
         /* eight-points */
         #eight-points > div {
@@ -346,6 +348,8 @@
             .point_box {
                 width: 300px;
             }
+            section#heroImage div.player-container-1 { height: 600px; }
+            section div.player-container-2 { height: 400px; }
         }
         @media (max-width:768px){
         /*header RWD設定  ============================================================*/
@@ -385,6 +389,8 @@
             #heroImage .textWrapper{left: 50px;}
         /*#lifeFunction setting------------------------------------------------------*/
             #lifeFunction .row>div:nth-of-type(1){margin-bottom: 70px;}
+            section#heroImage div.player-container-1 { height: 450px; }
+            section div.player-container-2 { height: 300px; }
         }
 
         @media (max-width:600px){
@@ -435,6 +441,8 @@
             .point_box {
                 width: 300px;
             }
+            section#heroImage div.player-container-1 { height: 240px; }
+            section div.player-container-2 { width: 125%; height: 240px; }
         }
         @media (max-width:375px){
             #heroImage .bx-wrapper .bx-prev,#heroImage .bx-wrapper .bx-next{padding:0; }
@@ -527,7 +535,9 @@
         </header>
 
         <section class="container" id="heroImage">
-            <div id="player1"></div>
+            <div class="player-container-1">
+                <div id="player1"></div>
+            </div>
             <!--
             <div>
                 <div class="topImage">
@@ -541,7 +551,9 @@
         </section>
 
         <section class="container" id="player-section">
-            <div id="player2"></div>
+            <div class="player-container-2">
+                <div id="player2"></div>
+            </div>
         </section>
 
 <script>
@@ -558,7 +570,7 @@
   var player2;
   function onYouTubeIframeAPIReady() {
     player1 = new YT.Player('player1', {
-      //height: '480',
+      height: '100%',
       width: '100%',
       videoId: 'VPQkBb4jWfg',
       events: {
@@ -569,8 +581,8 @@
     });
 
     player2 = new YT.Player('player2', {
-      //height: '390',
-      width: '70%',
+      height: '90%',
+      width: '80%',
       videoId: 'VJHdLT2bKio',
       events: {
         //'onReady': onPlayerReady,
