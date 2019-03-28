@@ -166,6 +166,8 @@
             z-index: 999;
         }
         #heroImage .reservation span{color: #fff;position: relative;top: 50%;left: 50%;transform: translate(-105%,-50%);display: inline-block;letter-spacing: 0.4rem;line-height: 1.8;}
+        section#heroImage div.player-container-1 { height: 720px; }
+        section div.player-container-2 { width: 80%; height: 480px; margin: auto; position: relative;}
 
         /* eight-points */
         #eight-points > div {
@@ -346,6 +348,8 @@
             .point_box {
                 width: 300px;
             }
+            section#heroImage div.player-container-1 { height: 600px; }
+            section div.player-container-2 { height: 400px; }
         }
         @media (max-width:768px){
         /*header RWD設定  ============================================================*/
@@ -385,6 +389,8 @@
             #heroImage .textWrapper{left: 50px;}
         /*#lifeFunction setting------------------------------------------------------*/
             #lifeFunction .row>div:nth-of-type(1){margin-bottom: 70px;}
+            section#heroImage div.player-container-1 { height: 450px; }
+            section div.player-container-2 { width: 100%; height: 300px; }
         }
 
         @media (max-width:600px){
@@ -435,6 +441,8 @@
             .point_box {
                 width: 300px;
             }
+            section#heroImage div.player-container-1 { height: 240px; }
+            section div.player-container-2 { height: 200px; }
         }
         @media (max-width:375px){
             #heroImage .bx-wrapper .bx-prev,#heroImage .bx-wrapper .bx-next{padding:0; }
@@ -505,9 +513,10 @@
             </nav>
 
             <ul class="fontSetting">
-                <li><a href="#eight-points">產品特色</a></li>
-                <li><a href="#timing-extra">生活交通</a></li>
+                <!--<li><a href="#eight-points">產品特色</a></li>-->
+                <!--<li><a href="#timing-extra">生活交通</a></li>-->
                 <li><a href="#gallery">精選圖輯</a></li>
+                <li><a href="#panoramic">實景空拍</a></li>
                 <li><a href="#contact">聯絡我們</a></li>
                 <li class="dropdown">
                     <a href="#reports">口碑推薦</a>
@@ -526,16 +535,84 @@
         </header>
 
         <section class="container" id="heroImage">
+            <div class="player-container-1">
+                <div id="player1"></div>
+            </div>
             <div>
+            <!--
                 <div class="topImage">
                     <div><img src="image/slides/top_long_4.jpg" alt="slider image2"></div>
                     <div><img src="image/slides/topImage_text_2_1_2.jpg" alt="slider image3"></div>
                     <div><img src="image/slides/nightview2_2_1.jpg" alt="slider image4"></div>
                 </div>
+            -->
                 <a href="#contact" class="reservation"><img src="image/order_200.png"></a>
             </div>
         </section>
 
+        <section class="container" id="player-section">
+            <div class="player-container-2">
+                <div id="player2"></div>
+            </div>
+        </section>
+
+<script>
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player1;
+  var player2;
+  function onYouTubeIframeAPIReady() {
+    player1 = new YT.Player('player1', {
+      height: '100%',
+      width: '100%',
+      videoId: 'VPQkBb4jWfg',
+      events: {
+        //'onReady': onPlayerReady,
+        //'onStateChange': onPlayerStateChange
+        'onReady': onPlayerReady
+      }
+    });
+
+    player2 = new YT.Player('player2', {
+      height: '100%',
+      width: '100%',
+      videoId: 'VJHdLT2bKio',
+      events: {
+        //'onReady': onPlayerReady,
+        //'onStateChange': onPlayerStateChange
+        //'onReady': onPlayerReady
+      }
+    });
+  }
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      setTimeout(stopVideo, 6000);
+      done = true;
+    }
+  }
+  function stopVideo() {
+    player2.stopVideo();
+  }
+</script>
+
+        <!--
         <section class="container" id="eight-points">
             <h2 class="mainTitle">東利八方<br />8安好宅，住宅品質要求滿足一次到位</h2>
             <div class="row">
@@ -644,8 +721,23 @@
             <h2>捷運 + 大橋 + 商圈&nbsp&nbsp新北第一環區域價值可期！</h1>
             <h3>交通便利，磁吸許多居民湧入；低利率時代，勢將造就一波移居潮！</h3>
         </section>
+        -->
 
         <section class="container" id="gallery">
+            <h2 class="mainTitle">生活機能圖輯</h2>
+            <div class="row">
+                <a class="four-cols" href="image/slides/metro.jpg" data-lightbox="life"><img src="image/slides/metro.jpg" alt=""></a>
+                <!--<a class="four-cols" href="image/slides/bottom_slide_05.jpg" data-lightbox="life"><img src="image/slides/bottom_slide_05.jpg" alt=""></a>-->
+                <a class="four-cols" href="image/slides/nightview2.jpg" data-lightbox="life"><img src="image/slides/nightview2.jpg" alt=""></a>
+                <a class="four-cols" href="image/slides/bottom_slide_07_b.jpg" data-lightbox="life"><img src="image/slides/bottom_slide_07_b.jpg" alt=""></a>
+                <a class="four-cols" href="image/slides/bottom_slide_02.jpg" data-lightbox="life"><img src="image/slides/bottom_slide_02.jpg" alt=""></a>
+                <a class="four-cols" href="image/life_5.jpg" data-lightbox="life"><img src="image/life_5.jpg" alt=""></a>
+                <!--<a class="four-cols" href="image/life_6.jpg" data-lightbox="life"><img src="image/life_6.jpg" alt=""></a>-->
+                <a class="four-cols" href="image/201903_7.jpg" data-lightbox="life"><img src="image/201903_7.jpg" alt=""></a>
+                <a class="four-cols" href="image/Dongli_img/riverBank.jpg" data-lightbox="life"><img src="image/Dongli_img/riverBank.jpg" alt=""></a>
+                <a class="four-cols" href="image/Dongli_img/riverBank2.jpg" data-lightbox="life"><img src="image/Dongli_img/riverBank2.jpg" alt=""></a>
+            </div>
+
             <h2 class="mainTitle">實品屋圖輯</h2>
             <div class="row">
                 <a class="four-cols" href="image/r1.jpg" data-lightbox="real"><img src="image/r1.jpg" alt=""></a>
@@ -666,20 +758,9 @@
                 <a class="five-cols" href="image/Dongli_img/library1.jpg" data-lightbox="public"><img src="image/Dongli_img/library1.jpg" alt=""></a>
                 <a class="five-cols" href="image/public_5.jpg" data-lightbox="public"><img src="image/public_5.jpg" alt=""></a>
             </div>
-
-            <h2 class="mainTitle">生活機能圖輯</h2>
-            <div class="row">
-                <a class="four-cols" href="image/slides/metro.jpg" data-lightbox="life"><img src="image/slides/metro.jpg" alt=""></a>
-                <a class="four-cols" href="image/slides/bottom_slide_05.jpg" data-lightbox="life"><img src="image/slides/bottom_slide_05.jpg" alt=""></a>
-                <a class="four-cols" href="image/slides/bottom_slide_07_b.jpg" data-lightbox="life"><img src="image/slides/bottom_slide_07_b.jpg" alt=""></a>
-                <a class="four-cols" href="image/slides/bottom_slide_02.jpg" data-lightbox="life"><img src="image/slides/bottom_slide_02.jpg" alt=""></a>
-                <a class="four-cols" href="image/life_5.jpg" data-lightbox="life"><img src="image/life_5.jpg" alt=""></a>
-                <a class="four-cols" href="image/life_6.jpg" data-lightbox="life"><img src="image/life_6.jpg" alt=""></a>
-                <a class="four-cols" href="image/Dongli_img/riverBank.jpg" data-lightbox="life"><img src="image/Dongli_img/riverBank.jpg" alt=""></a>
-                <a class="four-cols" href="image/Dongli_img/riverBank2.jpg" data-lightbox="life"><img src="image/Dongli_img/riverBank2.jpg" alt=""></a>
-            </div>
         </section>
 
+        <!--
         <section class="container" id="slider">
             <h2 class="mainTitle">三和商圈 繁華取靜</h2>
             <div class="extra-content">
@@ -691,9 +772,11 @@
                 <p class="fontSetting fs-xlarge text-red">大器落成・現可住</p>
             </div>
         </section>
+        -->
 
 <!--        <section class="container" id="designTeam"></section>-->
         <section class="container" id="panoramic">
+            <h2 class="mainTitle">實景位置空拍</h2>
             <img class="ok-one" src="image/ok2.jpg">
 <!--            <div>iframe</div>-->
         </section>
