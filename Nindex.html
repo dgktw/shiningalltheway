@@ -204,10 +204,12 @@
         #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 0 0 50px;}
         #timing .item{display: flex;align-items: center;justify-content:center;}
         #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red);}
+        #timing .secondLetter{font-size: 40px;margin-right:20px;color:var(--main-red);}
+        #timing .thirdLetter{font-size: 30px;color:var(--main-red);}
         #timing .content{margin-right:20px;width: 180px;}
         #timing .symbol{margin-left: 20px;font-size: 40px;}
-        #timing .distance{text-align: center;margin-bottom: 10px;}
-        #timing .place{text-align: center;position: relative;display: inline-block;}
+        #timing .distance{text-align: center;margin-bottom: 10px; margin-bottom: -12px;}
+        #timing .place{text-align: center;position: relative;display: inline-block; margin-right: 16px;}
         #timing .place::after{content: '';display: block;background-color: var(--main-black);width: 100%;height: 1.5px;position: absolute;left: 0;bottom: 0;}
         #timing .downArrow{display: none;}
 
@@ -337,6 +339,8 @@
             #timing .content{margin-right: 0;width: 170px;}
             #timing .symbol{margin-left: 0;}
             #timing .firstLetter{font-size: 48px;margin-right: 15px;}
+            #timing .secondLetter{font-size: 32px;margin-right: 15px;}
+            #timing .thirdLetter{font-size: 24px;}
             /*0919 feature setting-------------------------------------------------*/
             #feature .row{margin-bottom:50px;}
             /*#feature figure{height: 400px;}*/
@@ -672,10 +676,10 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">30</span>步
+                                <span class="secondLetter">雙捷運</span>
                             </div>
                         </div>
-                        <div class="place fontSetting"><br />抵達三和夜市</div>
+                        <div class="place fontSetting"></div>
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
@@ -684,9 +688,9 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">100</span>公尺</div>
+                                <span class="firstLetter">250</span>米</div>
                             </div>
-                        <div class="place fontSetting">開車上台北橋<br />5分鐘抵達中山時尚圈</div>
+                        <div class="place fontSetting">台北橋站</div>
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
@@ -695,10 +699,10 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">200</span>公尺
+                                <span class="thirdLetter">三重正核心</span>
                             </div>
                         </div>
-                        <div class="place fontSetting">步行2分鐘<br />抵達捷運台北橋站</div>
+                        <div class="place fontSetting"></div>
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
@@ -707,10 +711,10 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">600</span>公尺
+                                <span class="firstLetter">120</span>秒
                             </div>
                         </div>
-                        <div class="place fontSetting">步行6分鐘<br />抵達捷運三重國小站</div>
+                        <div class="place fontSetting">1站進北市</div>
                     </div>
                     <div class="symbol"></div>
                 </div>
