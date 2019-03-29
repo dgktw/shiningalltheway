@@ -204,10 +204,12 @@
         #timing .row{display: flex;align-items: center;justify-content: space-around;margin: 0 0 50px;}
         #timing .item{display: flex;align-items: center;justify-content:center;}
         #timing .firstLetter{font-size: 60px;margin-right:20px;color:var(--main-red);}
+        #timing .secondLetter{font-size: 40px;margin-right:20px;color:var(--main-red);}
+        #timing .thirdLetter{font-size: 30px;color:var(--main-red);}
         #timing .content{margin-right:20px;width: 180px;}
         #timing .symbol{margin-left: 20px;font-size: 40px;}
-        #timing .distance{text-align: center;margin-bottom: 10px;}
-        #timing .place{text-align: center;position: relative;display: inline-block;}
+        #timing .distance{text-align: center;margin-bottom: 10px; margin-bottom: -12px;}
+        #timing .place{text-align: center;position: relative;display: inline-block; margin-right: 16px;}
         #timing .place::after{content: '';display: block;background-color: var(--main-black);width: 100%;height: 1.5px;position: absolute;left: 0;bottom: 0;}
         #timing .downArrow{display: none;}
 
@@ -337,6 +339,8 @@
             #timing .content{margin-right: 0;width: 170px;}
             #timing .symbol{margin-left: 0;}
             #timing .firstLetter{font-size: 48px;margin-right: 15px;}
+            #timing .secondLetter{font-size: 32px;margin-right: 15px;}
+            #timing .thirdLetter{font-size: 24px;}
             /*0919 feature setting-------------------------------------------------*/
             #feature .row{margin-bottom:50px;}
             /*#feature figure{height: 400px;}*/
@@ -482,6 +486,16 @@
 
     <!-- YAHOO Code for DOT Conversion Page -->
     <script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10070602'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 815347962 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-815347962"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-815347962');
+    </script>
 </head>
 <body>
 
@@ -546,11 +560,12 @@
                     <div><img src="image/slides/nightview2_2_1.jpg" alt="slider image4"></div>
                 </div>
             -->
-                <a href="#contact" class="reservation"><img src="image/order_200.png"></a>
+                <a href="#contact" class="reservation"><img src="image/logo100-2.png"></a>
             </div>
         </section>
 
         <section class="container" id="player-section">
+            <h3>東利八方超狂蓋房過程，大膽公開不能說的秘密</h3>
             <div class="player-container-2">
                 <div id="player2"></div>
             </div>
@@ -672,10 +687,10 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">30</span>步
+                                <span class="secondLetter">雙捷運</span>
                             </div>
                         </div>
-                        <div class="place fontSetting"><br />抵達三和夜市</div>
+                        <div class="place fontSetting"></div>
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
@@ -684,9 +699,21 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">100</span>公尺</div>
+                                <span class="thirdLetter">台北橋站250米</span></div>
                             </div>
-                        <div class="place fontSetting">開車上台北橋<br />5分鐘抵達中山時尚圈</div>
+                        <!--<div class="place fontSetting">台北橋站</div>-->
+                        </div>
+                    <div class="symbol">&gt;</div>
+                </div>
+                <div class="downArrow"></div>
+                <div class="item">
+                    <div class="content">
+                        <div class="distance">
+                            <div class="noWrap fontSetting">
+                                <span class="thirdLetter">三重正核心</span>
+                            </div>
+                        </div>
+                        <div class="place fontSetting"></div>
                     </div>
                     <div class="symbol">&gt;</div>
                 </div>
@@ -695,22 +722,10 @@
                     <div class="content">
                         <div class="distance">
                             <div class="noWrap fontSetting">
-                                <span class="firstLetter">200</span>公尺
+                                <span class="thirdLetter">120秒<br />1站進北市</span>
                             </div>
                         </div>
-                        <div class="place fontSetting">步行2分鐘<br />抵達捷運台北橋站</div>
-                    </div>
-                    <div class="symbol">&gt;</div>
-                </div>
-                <div class="downArrow"></div>
-                <div class="item">
-                    <div class="content">
-                        <div class="distance">
-                            <div class="noWrap fontSetting">
-                                <span class="firstLetter">600</span>公尺
-                            </div>
-                        </div>
-                        <div class="place fontSetting">步行6分鐘<br />抵達捷運三重國小站</div>
+                        <!--<div class="place fontSetting"></div>-->
                     </div>
                     <div class="symbol"></div>
                 </div>
